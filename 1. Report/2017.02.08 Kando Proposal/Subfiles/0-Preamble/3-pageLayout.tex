@@ -1,0 +1,43 @@
+% Page size, margin, and header/footer settings:
+
+% Margin Settings:
+
+%\usepackage{showframe}                                    % Uncomment this to display header/footer/margins outlines.
+\newlength{\xhmargin   } \setlength{\xhmargin   }{0.750in}
+\newlength{\xtmargin   } \setlength{\xtmargin   }{1.000in} % [0.500in] Actual tmargin = [\xtmargin - \xheadheight]
+\newlength{\xbmargin   } \setlength{\xbmargin   }{0.800in} % [0.500in] Actual bmargin = [\xbmargin - \xfootskip  ]
+\newlength{\xheadheight} \setlength{\xheadheight}{0.500in} % May need to adjust tmargin in addition to this.
+\newlength{\xheadsep   } \setlength{\xheadsep   }{1.000em}
+\newlength{\xfootheight} \setlength{\xfootheight}{0.250in} % May need to adjust bmargin in addition to this.
+\newlength{\xfootskip  } \setlength{\xfootskip  }{0.300in} % [ = Footheight + Footsep]
+
+\KOMAoptions{fontsize   = 12pt         ,
+             parskip    = half-        ,
+             headings   = small        ,
+             headheight = \xheadheight , 
+             footheight = \xfootheight , 
+             DIV        = current      }
+
+\geometry{letterpaper                  ,
+          hmargin       = \xhmargin    ,
+          tmargin       = \xtmargin    ,
+          bmargin       = \xbmargin    ,
+          headsep       = \xheadsep    ,
+          footskip      = \xfootskip   }
+
+\savegeometry{default}
+
+
+
+
+% Initialize headers and footers
+
+% Header: Center:
+\chead{\normalfont \fns}
+
+% Footer: Center:
+\chead{\normalfont \fns}
+
+% Footer: Right-Side:
+\ofoot{\normalfont \fns}
+%\ofoot{\normalfont Page \thepage}

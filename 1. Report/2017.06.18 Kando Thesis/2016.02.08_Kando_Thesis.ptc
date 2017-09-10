@@ -1,0 +1,234 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {american}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abstract}{ii}{chapter*.1}
+\defcounter {refsection}{0}\relax 
+\vspace {-1em}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Acknowledgements}{iii}{chapter*.2}
+\defcounter {refsection}{0}\relax 
+\vspace {-1em}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Dedication}{iv}{chapter*.3}
+\defcounter {refsection}{0}\relax 
+\vspace {-0em}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Table of Contents}{iv}{chapter*.3}
+\defcounter {refsection}{0}\relax 
+\vspace {-1em}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Figures}{viii}{chapter*.4}
+\defcounter {refsection}{0}\relax 
+\vspace {-1em}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Tables}{x}{chapter*.5}
+\defcounter {refsection}{0}\relax 
+\vspace {-1em}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Code Listings}{xi}{chapter*.6}
+\defcounter {refsection}{0}\relax 
+\vspace {-0em}
+\defcounter {refsection}{0}\relax 
+\setcounter {tocdepth}{2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Purpose}{1}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Statement of the Problem}{2}{section.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Methodology}{3}{section.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}Bibliography}{5}{section.1.4}
+\ttl@starttoc {preliminaryDecisions@1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Preliminary Decisions}{6}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Selection of Control Problem}{6}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Inverted Pendulum}{6}{subsection.2.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.2}Two-Wheeled Robot}{7}{subsection.2.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Selection of Hardware}{9}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}MinSeg M2V3 Two-Wheeled Robot}{10}{subsection.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.1.1}Components}{13}{subsubsection.2.2.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.1.2}Arduino Single-Board Microcontroller}{14}{subsubsection.2.2.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.1.3}Power Source}{17}{subsubsection.2.2.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline External-Sourced Power (USB-Cable Connection)}{17}{section*.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Internal-Sourced Power (Battery Pack)}{17}{section*.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.1.4}Motor Driver}{19}{subsubsection.2.2.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.1.5}Motor, Gearbox, and Encoder}{22}{subsubsection.2.2.1.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Gearing}{23}{section*.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Development PC}{25}{subsection.2.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.2.1}Designated PC}{26}{subsubsection.2.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.2.2}Designated Operating System}{26}{subsubsection.2.2.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.2.3}Designated Hardware-Interfacing Software}{27}{subsubsection.2.2.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Selection of a Hardware Model}{28}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Selection of Controller Design}{29}{section.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}Bibliography}{30}{section.2.5}
+\ttl@stoptoc {preliminaryDecisions@1}
+\ttl@starttoc {testPlatform@1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Test Platform}{32}{chapter.3}
+\ttl@starttoc {testPlatform:simulink@1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Simulink: minseg\_M2V3\_2017a.slx}{33}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}Root}{33}{subsection.3.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1.1}Bus Structures}{35}{subsubsection.3.1.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1.2}Variant Subsystems}{35}{subsubsection.3.1.1.2}
+\ttl@stoptoc {testPlatform:simulink@1}
+\ttl@starttoc {testPlatform:matlab@1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Matlab: minseg.m}{36}{section.3.2}
+\ttl@stoptoc {testPlatform:matlab@1}
+\ttl@stoptoc {testPlatform@1}
+\ttl@starttoc {hwePlantDynamicsModel@1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Hardware-Equivalent Dynamics Model}{37}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Nonlinear model}{40}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.1}Coordinate System}{40}{subsection.4.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Differential Equations}{42}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}Wheel Angular Position $\theta $ and Body Pitch $\phi _{x}$}{42}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.2}Body Yaw $\phi _{y}$}{43}{subsection.4.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}State-Space Representation}{44}{section.4.3}
+\ttl@starttoc {hwePlantDynamicsModel:nonintuitiveParameters@1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Calculation of Nonintuitive Parameters}{47}{section.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.1}Moment of Inertia: Body: X-axis (Pitch) $J_{\phi _{x}}$}{47}{subsection.4.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.2}Moment of Inertia: Body: Y-axis (Yaw) $J_{\phi _{y}}$}{47}{subsection.4.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.3}Length From Body Center of Mass to Body Axis of Rotation $l_{b.c2a}$}{48}{subsection.4.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.4.3.1}Yamamoto Method}{48}{subsubsection.4.4.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.4.3.2}Vaccaro Method}{49}{subsubsection.4.4.3.2}
+\ttl@stoptoc {hwePlantDynamicsModel:nonintuitiveParameters@1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}Bibliography}{52}{section.4.5}
+\ttl@stoptoc {hwePlantDynamicsModel@1}
+\ttl@starttoc {controlDesign@1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Control Design}{53}{chapter.5}
+\ttl@starttoc {additionalDynamics@1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Additional Dynamics}{53}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.1}Background}{53}{subsection.5.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1.1}Reference Signal}{65}{subsubsection.5.1.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.2}Tracking System}{66}{subsection.5.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.2.1}Discrete Additional Dynamics}{67}{subsubsection.5.1.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.3}Control Gains}{68}{subsection.5.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.3.1}Optimal}{68}{subsubsection.5.1.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {5.1.3.1.1}Implementation}{68}{paragraph.5.1.3.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {5.1.3.1.2}Results: Simulation}{69}{paragraph.5.1.3.1.2}
+\ttl@stoptoc {additionalDynamics@1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Bibliography}{78}{section.5.2}
+\ttl@stoptoc {controlDesign@1}
+\ttl@starttoc {conclusions@1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Conclusions}{79}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Future work}{79}{section.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Bibliography}{84}{section.6.2}
+\ttl@stoptoc {conclusions@1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendices}{85}{section*.54}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Code Listings}{86}{Appendix.a.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}minseg.m}{86}{section.a.A.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.1}Global Setup}{89}{subsection.a.A.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.2}User Inputs}{91}{subsection.a.A.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.3}Initialization}{93}{subsection.a.A.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.1.3.1}General}{94}{subsubsection.a.A.1.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.1.3.2}Model}{95}{subsubsection.a.A.1.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {A.1.3.2.1}General}{96}{paragraph.a.A.1.3.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {A.1.3.2.2}Plant}{97}{paragraph.a.A.1.3.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subparagraph}{\numberline {A.1.3.2.2.1}Hardware}{99}{subparagraph.a.A.1.3.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subparagraph}{\numberline {A.1.3.2.2.2}Nonlinear Dynamics Model}{104}{subparagraph.a.A.1.3.2.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subparagraph}{\numberline {A.1.3.2.2.3}Linear Dynamics Model}{105}{subparagraph.a.A.1.3.2.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {A.1.3.2.3}Controller}{112}{paragraph.a.A.1.3.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {A.1.3.2.4}Board Inputs and Outputs}{113}{paragraph.a.A.1.3.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {A.1.3.2.5}Build Parameters}{115}{paragraph.a.A.1.3.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.1.3.3}Serial}{120}{subsubsection.a.A.1.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {A.1.3.3.1}Write}{121}{paragraph.a.A.1.3.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {A.1.3.3.2}Read}{122}{paragraph.a.A.1.3.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {A.1.3.3.3}General}{127}{paragraph.a.A.1.3.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {A.1.3.3.4}Reads}{130}{paragraph.a.A.1.3.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {A.1.3.3.5}Build Parameters}{131}{paragraph.a.A.1.3.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.4}Processing}{133}{subsection.a.A.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.1.4.1}Build}{134}{subsubsection.a.A.1.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.1.4.2}Serial Transmission}{135}{subsubsection.a.A.1.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.1.4.3}Serial Reads Post-Processing}{137}{subsubsection.a.A.1.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.5}Output}{139}{subsection.a.A.1.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.1.5.1}Save}{140}{subsubsection.a.A.1.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.1.5.2}Serial Reads Plot}{141}{subsubsection.a.A.1.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.6}Global Cleanup}{143}{subsection.a.A.1.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{144}{chapter*.55}
+\contentsfinish 

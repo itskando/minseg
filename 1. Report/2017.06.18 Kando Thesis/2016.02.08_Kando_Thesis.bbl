@@ -1,0 +1,975 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{none/global/}
+    \entry{REF:online:2009-yamamoto}{online}{}
+      \name{author}{1}{}{%
+        {{hash=c50360c71d896d22ac04a49216b3a796}{%
+           family={Yamamoto},
+           familyi={Y\bibinitperiod},
+           given={Yorihisa},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{c50360c71d896d22ac04a49216b3a796}
+      \strng{fullhash}{c50360c71d896d22ac04a49216b3a796}
+      \strng{authornamehash}{c50360c71d896d22ac04a49216b3a796}
+      \strng{authorfullhash}{c50360c71d896d22ac04a49216b3a796}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{month}{5}
+      \field{title}{NXTway-GS (Self-Balancing Two-Wheeled Robot) Controller Design}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.mathworks.com/matlabcentral/fileexchange/19147-nxtway-gs--self-balancing-two-wheeled-robot--controller-design
+      \endverb
+    \endentry
+    \entry{REF:textbook:1995-vaccaro}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ef1a20e284278af5b4c0417fe78a0b58}{%
+           family={Vaccaro},
+           familyi={V\bibinitperiod},
+           given={Richard\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Mcgraw-Hill College}%
+      }
+      \strng{namehash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \strng{fullhash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \strng{authornamehash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \strng{authorfullhash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0070667815}
+      \field{month}{1}
+      \field{series}{Mcgraw Hill Series in Electrical and Computer Engineering}
+      \field{title}{Digital Control: A State-space Approach}
+      \field{year}{1995}
+      \field{dateera}{ce}
+    \endentry
+    \entry{REF:online:wikipedia:invertedPendulum:physicalModel}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={{Wikipedia}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Wikimedia Foundation}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{24}
+      \field{month}{6}
+      \field{title}{Inverted Pendulum}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Inverted_pendulum
+      \endverb
+    \endentry
+    \entry{REF:online:twoWheeledRobot:examplePhoto}{online}{}
+      \name{author}{1}{}{%
+        {{hash=28a60c7c3c2e20e13b727f5948288686}{%
+           family={Melanson},
+           familyi={M\bibinitperiod},
+           given={Donald},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Engadget}%
+      }
+      \strng{namehash}{28a60c7c3c2e20e13b727f5948288686}
+      \strng{fullhash}{28a60c7c3c2e20e13b727f5948288686}
+      \strng{authornamehash}{28a60c7c3c2e20e13b727f5948288686}
+      \strng{authorfullhash}{28a60c7c3c2e20e13b727f5948288686}
+      \field{sortinit}{6}
+      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{14}
+      \field{month}{7}
+      \field{title}{Researchers Create Life-saving UBOT-5 Robot, Play Dress-up with It}
+      \field{urlday}{5}
+      \field{urlmonth}{2}
+      \field{urlyear}{2017}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.engadget.com/2008/04/17/researchers-create-life-saving-ubot-5-robot-play-dress-up-with/
+      \endverb
+    \endentry
+    \entry{REF:conference:2015-howard}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=79bbf80a5d4322bcb68a6ea9fae1317b}{%
+           family={Howard},
+           familyi={H\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=0b8df5cb8925b38e4b46e5867a920c00}{%
+           family={Bushnell},
+           familyi={B\bibinitperiod},
+           given={Linda},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hangzhou, China}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{a8bd1d69da4797fd3e64abb37156f78c}
+      \strng{fullhash}{a8bd1d69da4797fd3e64abb37156f78c}
+      \strng{authornamehash}{a8bd1d69da4797fd3e64abb37156f78c}
+      \strng{authorfullhash}{a8bd1d69da4797fd3e64abb37156f78c}
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 International Conference on Computer Science and Mechanical Automation (CSMA)}
+      \field{month}{10}
+      \field{title}{Enhancing Linear System Theory Curriculum with an Inverted Pendulum Robot}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1109/CSMA.2015.63
+      \endverb
+    \endentry
+    \entry{REF:online:mathworks:arduino}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8f631b769d4710fba49eafd295c9d96d}{%
+           family={{Mathworks}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f631b769d4710fba49eafd295c9d96d}
+      \strng{fullhash}{8f631b769d4710fba49eafd295c9d96d}
+      \strng{authornamehash}{8f631b769d4710fba49eafd295c9d96d}
+      \strng{authorfullhash}{8f631b769d4710fba49eafd295c9d96d}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Arduino Programming with MATLAB and Simulink}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.mathworks.com/discovery/arduino-programming-matlab-simulink.html
+      \endverb
+    \endentry
+    \entry{REF:online:hurst:minsegDrivers}{online}{}
+      \name{author}{1}{}{%
+        {{hash=cc4fa10e51575cf111e3ba298c6f836d}{%
+           family={Hurst},
+           familyi={H\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Rensselaer Polytechnic Institute (RPI)}%
+      }
+      \strng{namehash}{cc4fa10e51575cf111e3ba298c6f836d}
+      \strng{fullhash}{cc4fa10e51575cf111e3ba298c6f836d}
+      \strng{authornamehash}{cc4fa10e51575cf111e3ba298c6f836d}
+      \strng{authorfullhash}{cc4fa10e51575cf111e3ba298c6f836d}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{17}
+      \field{month}{6}
+      \field{title}{Rensselaer Arduino Support Package Library (RASPLib)}
+      \field{titleaddon}{1.1}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.mathworks.com/matlabcentral/fileexchange/62702-rensselaer-arduino-support-package-library--rasplib-
+      \endverb
+    \endentry
+    \entry{REF:online:minseg:m2v3}{online}{}
+      \name{author}{1}{}{%
+        {{hash=89dcba8a3ce9604855d4112c9b1b5c27}{%
+           family={{MinSeg}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{89dcba8a3ce9604855d4112c9b1b5c27}
+      \strng{fullhash}{89dcba8a3ce9604855d4112c9b1b5c27}
+      \strng{authornamehash}{89dcba8a3ce9604855d4112c9b1b5c27}
+      \strng{authorfullhash}{89dcba8a3ce9604855d4112c9b1b5c27}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{M2V3}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://minseg.com/collections/minseg-kits/products/minsegshield-kit-m2v3-2-dual-drive-segway-and-line-follower
+      \endverb
+    \endentry
+    \entry{REF:online:wikipedia:arduino}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={{Wikipedia}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Wikimedia Foundation}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{month}{7}
+      \field{title}{Inverted Pendulum}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Arduino
+      \endverb
+    \endentry
+    \entry{REF:online:arduino:clock}{online}{}
+      \name{author}{1}{}{%
+        {{hash=555a956431a47d2b4068ab9da2965228}{%
+           family={{jkenny23}},
+           familyi={j\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Arduino}%
+      }
+      \strng{namehash}{555a956431a47d2b4068ab9da2965228}
+      \strng{fullhash}{555a956431a47d2b4068ab9da2965228}
+      \strng{authornamehash}{555a956431a47d2b4068ab9da2965228}
+      \strng{authorfullhash}{555a956431a47d2b4068ab9da2965228}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{9}
+      \field{month}{5}
+      \field{title}{Crystal vs. Resonator}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://forum.arduino.cc/index.php?topic=60662.0
+      \endverb
+    \endentry
+    \entry{REF:online:arduino:unoVsMega}{online}{}
+      \name{author}{1}{}{%
+        {{hash=295edb0fbe0411d4ed8b60a2b2953f67}{%
+           family={{Arduino Geeks}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Arduino Starter Kits}%
+      }
+      \strng{namehash}{295edb0fbe0411d4ed8b60a2b2953f67}
+      \strng{fullhash}{295edb0fbe0411d4ed8b60a2b2953f67}
+      \strng{authornamehash}{295edb0fbe0411d4ed8b60a2b2953f67}
+      \strng{authorfullhash}{295edb0fbe0411d4ed8b60a2b2953f67}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{2}
+      \field{month}{2}
+      \field{title}{Arduino Mega Vs Uno Compared}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.arduinostarterkits.com/reviews/arduino-mega-vs-uno-compared/
+      \endverb
+    \endentry
+    \entry{REF:online:reichelt:arduinoMega}{online}{}
+      \name{author}{1}{}{%
+        {{hash=548e55d0345b8b1faba768b0bc2ced79}{%
+           family={{Reichelt Elektronik}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{548e55d0345b8b1faba768b0bc2ced79}
+      \strng{fullhash}{548e55d0345b8b1faba768b0bc2ced79}
+      \strng{authornamehash}{548e55d0345b8b1faba768b0bc2ced79}
+      \strng{authorfullhash}{548e55d0345b8b1faba768b0bc2ced79}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Arduino Mega: Arduino Mega 2560, ATmega1280, USB}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.reichelt.com/de/en/Single-board-microcontroller/ARDUINO-MEGA/3/index.html?ACTION=3&GROUPID=6667&ARTICLE=119696
+      \endverb
+    \endentry
+    \entry{REF:online:pighiXXX:pinout:arduinoMega}{online}{}
+      \name{author}{1}{}{%
+        {{hash=f3ca8f3fd0df48c94da25fc1f5827c2d}{%
+           family={{Alberto "PighiXXX"}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {PighiXXX}%
+      }
+      \strng{namehash}{f3ca8f3fd0df48c94da25fc1f5827c2d}
+      \strng{fullhash}{f3ca8f3fd0df48c94da25fc1f5827c2d}
+      \strng{authornamehash}{f3ca8f3fd0df48c94da25fc1f5827c2d}
+      \strng{authorfullhash}{f3ca8f3fd0df48c94da25fc1f5827c2d}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{4}
+      \field{month}{8}
+      \field{title}{Mega}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.pighixxx.com/test/portfolio-items/mega/
+      \endverb
+    \endentry
+    \entry{REF:online:powerstream:batteryDrainage}{online}{}
+      \name{author}{1}{}{%
+        {{hash=6580b6b07100171bd8ccac20334a24b6}{%
+           family={PowerStream},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{6580b6b07100171bd8ccac20334a24b6}
+      \strng{fullhash}{6580b6b07100171bd8ccac20334a24b6}
+      \strng{authornamehash}{6580b6b07100171bd8ccac20334a24b6}
+      \strng{authorfullhash}{6580b6b07100171bd8ccac20334a24b6}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{29}
+      \field{month}{6}
+      \field{title}{Discharge tests of AA Batteries, Alkaline and NiMH}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.powerstream.com/AA-tests.htm
+      \endverb
+    \endentry
+    \entry{REF:online:ti:datasheet:sn754410}{online}{}
+      \name{author}{1}{}{%
+        {{hash=80293b4ff94467c0484a58bc2894e211}{%
+           family={{Texas Instruments}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{80293b4ff94467c0484a58bc2894e211}
+      \strng{fullhash}{80293b4ff94467c0484a58bc2894e211}
+      \strng{authornamehash}{80293b4ff94467c0484a58bc2894e211}
+      \strng{authorfullhash}{80293b4ff94467c0484a58bc2894e211}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{1}
+      \field{title}{SN754410: Quadruple H Drivers}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.ti.com/product/sn754410?qgpn=sn754410
+      \endverb
+    \endentry
+    \entry{REF:online:philohome}{online}{}
+      \name{author}{1}{}{%
+        {{hash=67b6e6ee64c030ddf6c174d41b0672ed}{%
+           family={{"Philo" Hurbain}},
+           familyi={"\bibinitperiod},
+           given={Philippe},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{67b6e6ee64c030ddf6c174d41b0672ed}
+      \strng{fullhash}{67b6e6ee64c030ddf6c174d41b0672ed}
+      \strng{authornamehash}{67b6e6ee64c030ddf6c174d41b0672ed}
+      \strng{authorfullhash}{67b6e6ee64c030ddf6c174d41b0672ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{15}
+      \field{month}{5}
+      \field{title}{NXT Motor Internals}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.philohome.com/nxtmotor/nxtmotor.htm
+      \endverb
+    \endentry
+    \entry{REF:online:everymac:macbookpro:2015}{online}{}
+      \name{author}{1}{}{%
+        {{hash=f2096094ea2f20b83e0a5d85b7b3503b}{%
+           family={{Everymac}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{f2096094ea2f20b83e0a5d85b7b3503b}
+      \strng{fullhash}{f2096094ea2f20b83e0a5d85b7b3503b}
+      \strng{authornamehash}{f2096094ea2f20b83e0a5d85b7b3503b}
+      \strng{authorfullhash}{f2096094ea2f20b83e0a5d85b7b3503b}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{22}
+      \field{month}{5}
+      \field{title}{Apple MacBook Pro "Core i5" 2.7 13" Early 2015 Specs}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.7-13-early-2015-retina-display-specs.html
+      \endverb
+    \endentry
+    \entry{REF:online:mathworks:supportedCompilers}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8f631b769d4710fba49eafd295c9d96d}{%
+           family={{Mathworks}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f631b769d4710fba49eafd295c9d96d}
+      \strng{fullhash}{8f631b769d4710fba49eafd295c9d96d}
+      \strng{authornamehash}{8f631b769d4710fba49eafd295c9d96d}
+      \strng{authorfullhash}{8f631b769d4710fba49eafd295c9d96d}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Previous Releases: System Requirements and Supported Compilers}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.mathworks.com/support/sysreq/previous_releases.html
+      \endverb
+    \endentry
+    \entry{REF:thesis:masters:2012-peltier}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=d3422c1c1a91f581d6ec819e0447c512}{%
+           family={Peltier},
+           familyi={P\bibinitperiod},
+           given={Michael\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Rhode Island (URI): Department of Electrical Engineering}%
+      }
+      \strng{namehash}{d3422c1c1a91f581d6ec819e0447c512}
+      \strng{fullhash}{d3422c1c1a91f581d6ec819e0447c512}
+      \strng{authornamehash}{d3422c1c1a91f581d6ec819e0447c512}
+      \strng{authorfullhash}{d3422c1c1a91f581d6ec819e0447c512}
+      \field{sortinit}{5}
+      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{1}
+      \field{title}{Trajectory Control of a Two-Wheeled Robot}
+      \field{type}{mathesis}
+      \field{year}{2012}
+      \field{dateera}{ce}
+    \endentry
+    \entry{REF:textbook:1995-lewis}{book}{}
+      \name{author}{2}{}{%
+        {{hash=2de6db374ef14c4f9959e3e45fa40f9c}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Frank\bibnamedelima L.},
+           giveni={F\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=334060cd96cd903acfb5f79fd4c0eb07}{%
+           family={Syrmos},
+           familyi={S\bibinitperiod},
+           given={Vassilis\bibnamedelima L.},
+           giveni={V\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley-Interscience}%
+      }
+      \strng{namehash}{02c7e99480648bec1e554c59a1db2861}
+      \strng{fullhash}{02c7e99480648bec1e554c59a1db2861}
+      \strng{authornamehash}{02c7e99480648bec1e554c59a1db2861}
+      \strng{authorfullhash}{02c7e99480648bec1e554c59a1db2861}
+      \field{sortinit}{7}
+      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second}
+      \field{isbn}{978-0-471-03378-3}
+      \field{month}{11}
+      \field{title}{Optimal Control}
+      \field{year}{1995}
+      \field{dateera}{ce}
+    \endentry
+    \entry{REF:online:legoWheels}{online}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
+      \field{labeltitlesource}{title}
+      \field{day}{3}
+      \field{month}{10}
+      \field{title}{Lego Wheels Chart}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://wheels.sariel.pl/
+      \endverb
+    \endentry
+    \entry{REF:article:2013-chan}{article}{}
+      \name{author}{3}{}{%
+        {{hash=3914fd634c78d8f821a8e4fc70eb4956}{%
+           family={Chan},
+           familyi={C\bibinitperiod},
+           given={Ronald\bibnamedelimb Ping\bibnamedelima Man},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=0fe703cc353d5b19e3f4acb25e74736c}{%
+           family={Stol},
+           familyi={S\bibinitperiod},
+           given={Karl\bibnamedelima A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=b076beda8fb95f75e8f50459e88acf0e}{%
+           family={Halkyard},
+           familyi={H\bibinitperiod},
+           given={C.\bibnamedelimi Roger},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c741a386fecf381b1fac49b1d778e43}
+      \strng{fullhash}{4c741a386fecf381b1fac49b1d778e43}
+      \strng{authornamehash}{4c741a386fecf381b1fac49b1d778e43}
+      \strng{authorfullhash}{4c741a386fecf381b1fac49b1d778e43}
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annual Reviews in Control}
+      \field{month}{4}
+      \field{number}{1}
+      \field{title}{Review of modelling and control of two-wheeled robots}
+      \field{volume}{37}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{pages}{89\bibrangedash 103}
+      \range{pages}{15}
+    \endentry
+    \entry{REF:conference:2010-jones}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=415f6caaf957b6a6bc99d1351142177b}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Daniel\bibnamedelima R.},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=0fe703cc353d5b19e3f4acb25e74736c}{%
+           family={Stol},
+           familyi={S\bibinitperiod},
+           given={Karl\bibnamedelima A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=fb46cc83a5df85e86f4cdb2b1554bf99}{%
+           family={Wyeth},
+           familyi={W\bibinitperiod},
+           given={Gordon},
+           giveni={G\bibinitperiod}}}%
+        {{hash=5c5358fbf9113fcf41a77a4b847721c7}{%
+           family={Upcroft},
+           familyi={U\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Brisbane, Australia}%
+      }
+      \list{organization}{1}{%
+        {Australian Robotics \& Automation Association (ARAA)}%
+      }
+      \strng{namehash}{06f5fbc3ada81483e6e0aa95c3b867fc}
+      \strng{fullhash}{06f5fbc3ada81483e6e0aa95c3b867fc}
+      \strng{authornamehash}{06f5fbc3ada81483e6e0aa95c3b867fc}
+      \strng{authorfullhash}{06f5fbc3ada81483e6e0aa95c3b867fc}
+      \strng{editornamehash}{62a90479842afbc361ef7d1e9694c1fc}
+      \strng{editorfullhash}{62a90479842afbc361ef7d1e9694c1fc}
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Australasian Conference on Robotics and Automation (ACRA) 2010}
+      \field{month}{12}
+      \field{title}{Modelling and Stability Control of Two-Wheeled Robots in Low-Traction Environments}
+      \field{year}{2010}
+      \field{dateera}{ce}
+    \endentry
+    \entry{REF:conference:2014-jamil}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=6ffa6a08d903eac68b0ec774969c04d2}{%
+           family={Jamil},
+           familyi={J\bibinitperiod},
+           given={Osama},
+           giveni={O\bibinitperiod}}}%
+        {{hash=2471a443f0829b6c224ea1dae914228a}{%
+           family={Jamil},
+           familyi={J\bibinitperiod},
+           given={Mosin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=97d49c3969e6ba840d0b8d17c43bcb26}{%
+           family={Ayaz},
+           familyi={A\bibinitperiod},
+           given={Yasar},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=afd764cef360ed014d70e0af92bb53a6}{%
+           family={Khubab},
+           familyi={K\bibinitperiod},
+           given={Ahmad},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Islamabad, Pakistan}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{9be9528ec865796aa0796c6f8ce22c1c}
+      \strng{fullhash}{9be9528ec865796aa0796c6f8ce22c1c}
+      \strng{authornamehash}{9be9528ec865796aa0796c6f8ce22c1c}
+      \strng{authorfullhash}{9be9528ec865796aa0796c6f8ce22c1c}
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2014 International Coneference on Robotics and Emerging Allied Technologies in Engineering (iCREATE)}
+      \field{month}{4}
+      \field{title}{Modeling, Control of a Two-Wheeled Self-Balancing Robot}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1109/iCREATE.2014.6828364
+      \endverb
+    \endentry
+    \entry{REF:conference:2014-vaccaro}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=ef1a20e284278af5b4c0417fe78a0b58}{%
+           family={Vaccaro},
+           familyi={V\bibinitperiod},
+           given={Richard\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Portland, OR, USA}%
+      }
+      \list{organization}{1}{%
+        {ACC}%
+      }
+      \strng{namehash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \strng{fullhash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \strng{authornamehash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \strng{authorfullhash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2014 American Control Conference (ACC)}
+      \field{month}{6}
+      \field{title}{An Optimization Approach to the Pole-Placement Design of Robust Linear Multivariable Control Systems}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1109/ACC.2014.6858987
+      \endverb
+    \endentry
+    \entry{REF:conference:2015-gong}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=071333d04c896fc981f9247af9b22b4d}{%
+           family={Gong},
+           familyi={G\bibinitperiod},
+           given={Yulei},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=657d0ac46c51d089ac937ed9305139ed}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Huijiao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d7186b18653e2f612d172b80a9e95be8}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Xiao},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hangzhou, China}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{700495aff05d5b672673b74d1ed69686}
+      \strng{fullhash}{700495aff05d5b672673b74d1ed69686}
+      \strng{authornamehash}{700495aff05d5b672673b74d1ed69686}
+      \strng{authorfullhash}{700495aff05d5b672673b74d1ed69686}
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 International Conference on Computer Science and Mechanical Automation (CSMA)}
+      \field{month}{10}
+      \field{title}{Research on Control Strategy of Two-wheeled Self-balancing Robot}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1109/CSMA.2015.63
+      \endverb
+    \endentry
+    \entry{REF:interview:2017-01-23-vaccaro}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ef1a20e284278af5b4c0417fe78a0b58}{%
+           family={Vaccaro},
+           familyi={V\bibinitperiod},
+           given={Richard\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {University of Rhode Island (URI): Department of Electrical Engineering}%
+      }
+      \strng{namehash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \strng{fullhash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \strng{authornamehash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \strng{authorfullhash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
+      \field{labelnamesource}{author}
+      \field{day}{23}
+      \field{howpublished}{Personal Interview}
+      \field{month}{1}
+      \field{year}{2017}
+      \field{dateera}{ce}
+    \endentry
+    \entry{REF:online:minseg:home}{online}{}
+      \name{author}{1}{}{%
+        {{hash=89dcba8a3ce9604855d4112c9b1b5c27}{%
+           family={{MinSeg}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{89dcba8a3ce9604855d4112c9b1b5c27}
+      \strng{fullhash}{89dcba8a3ce9604855d4112c9b1b5c27}
+      \strng{authornamehash}{89dcba8a3ce9604855d4112c9b1b5c27}
+      \strng{authorfullhash}{89dcba8a3ce9604855d4112c9b1b5c27}
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Homepage}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://minseg.com/
+      \endverb
+    \endentry
+    \entry{REF:online:mathworks:home}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8f631b769d4710fba49eafd295c9d96d}{%
+           family={{Mathworks}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f631b769d4710fba49eafd295c9d96d}
+      \strng{fullhash}{8f631b769d4710fba49eafd295c9d96d}
+      \strng{authornamehash}{8f631b769d4710fba49eafd295c9d96d}
+      \strng{authorfullhash}{8f631b769d4710fba49eafd295c9d96d}
+      \field{sortinit}{9}
+      \field{sortinithash}{2999ebab86052e6d71b434385f8b4ed2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Homepage}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.mathworks.com/
+      \endverb
+    \endentry
+    \entry{REF:textbook:2001-deLuca}{inbook}{}
+      \name{author}{3}{}{%
+        {{hash=3204938118641cbd43d0fbcd3fe5fdf7}{%
+           family={De\bibnamedelima Luca},
+           familyi={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=dcc89269b2eb1155024b2da9fd7c68eb}{%
+           family={Oriolo},
+           familyi={O\bibinitperiod},
+           given={Giuseppe},
+           giveni={G\bibinitperiod}}}%
+        {{hash=5b47f42b15de26aa5c6858fa40324a84}{%
+           family={Vendittelli},
+           familyi={V\bibinitperiod},
+           given={Marilena},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{9ff43c6be5d99b9f4bc6e6cf3b8477de}
+      \strng{fullhash}{9ff43c6be5d99b9f4bc6e6cf3b8477de}
+      \strng{authornamehash}{9ff43c6be5d99b9f4bc6e6cf3b8477de}
+      \strng{authorfullhash}{9ff43c6be5d99b9f4bc6e6cf3b8477de}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Ramsete: Articulated and Mobile Robotics for Services and Technologies}
+      \field{isbn}{978-3-540-45000-9}
+      \field{title}{Control of Wheeled Mobile Robots: An Experimental Overview}
+      \field{year}{2001}
+      \field{dateera}{ce}
+      \field{pages}{181\bibrangedash 226}
+      \range{pages}{46}
+      \verb{doi}
+      \verb 10.1007/3-540-45000-9_8
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/3-540-45000-9_8
+      \endverb
+    \endentry
+    \entry{REF:thesis:undergraduate:2011-bageant}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=372b6a38ee51d10fb777d19b1afdb5d8}{%
+           family={Bageant},
+           familyi={B\bibinitperiod},
+           given={Maia\bibnamedelima R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Massachusettes Institute of Technology (MIT): Department of Mechanical Engineering}%
+      }
+      \strng{namehash}{372b6a38ee51d10fb777d19b1afdb5d8}
+      \strng{fullhash}{372b6a38ee51d10fb777d19b1afdb5d8}
+      \strng{authornamehash}{372b6a38ee51d10fb777d19b1afdb5d8}
+      \strng{authorfullhash}{372b6a38ee51d10fb777d19b1afdb5d8}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{note}{Undergraduate Thesis}
+      \field{title}{Balancing a Two-Wheeled Segway Robot}
+      \field{year}{2011}
+      \field{dateera}{ce}
+    \endentry
+    \entry{REF:thesis:masters:2014-daSilva}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=b3db101e2597305289ff7c07199509e0}{%
+           family={Silva\bibnamedelima Jr},
+           familyi={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Airton\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+           prefix={da},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {University of Massachusettes (UMass): Department of Mechanical}%
+        {Industrial Engineering}%
+      }
+      \strng{namehash}{b3db101e2597305289ff7c07199509e0}
+      \strng{fullhash}{b3db101e2597305289ff7c07199509e0}
+      \strng{authornamehash}{b3db101e2597305289ff7c07199509e0}
+      \strng{authorfullhash}{b3db101e2597305289ff7c07199509e0}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{5}
+      \field{title}{Design and Control of a Two-Wheeled Robotic Walker}
+      \field{type}{mathesis}
+      \field{year}{2014}
+      \field{dateera}{ce}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

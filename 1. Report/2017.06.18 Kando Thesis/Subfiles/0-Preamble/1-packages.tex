@@ -1,0 +1,96 @@
+% meta tools
+\usepackage{standalone}                 % allows for independent runs of subfiles. [includes currfile].
+                                        % IMPORTANT: [realmainfile] option of currfile requires compiler option -recorder to be active.
+                                        % IMPORTANT: standalone loads currfile package without options.  To configure currfile options:
+                                        %            place them in \documentclass[options](standalone) options. 
+                                        %      NOTE: Loading the currfile package with options will clash with the standalone package.
+\usepackage{etoolbox}                   % allows if/else statements in code. [required for: standalone+nocite fix, equation numbering.]
+
+% math
+\usepackage{mathtools}                  % includes amsmath, supplements it.
+\usepackage{subdepth}                   % allows manual vertical alignment for misaligned subscripts.
+
+% font
+\newcommand{\xLanguage}{american}       % do not remove: used in multiple locations.
+\usepackage[\xLanguage]{babel}          % hyphenates words correctly, based on document language. [\xlanguage is defined immediately above.]
+\usepackage{amssymb}                    % symbols. [permits use of \bigstar].
+%\usepackage{mathptmx}                  % times new roman font. totally lame, but required by EB. [supercedes 'times' package].
+\usepackage[T1]{fontenc}                % improves pdf reader's ability to copy    atypical text characters from output pdf file.
+\usepackage[latin1]{inputenc}           % improves tex editor's ability to compile atypical text characters into output pdf file from tex file.
+
+%\usepackage{verbatim}                  % [superceded by listings] improves verbatim environment. [includes comment package].
+\usepackage{listings}                   % improved version of verbatim. imports script languages (with syntax coloring).
+
+\usepackage{color}                      % color commands.
+\usepackage[dvipsnames]{xcolor}         % additional color commands.
+
+\usepackage{soul}                       % strikethrough commands.
+\usepackage{transparent}                % transparent objects/font.
+
+% layout: page/spacing/headings
+\usepackage{geometry}                   % margin/page layout settings.
+\usepackage{changepage}                 % allows adjustwidth, for figures larger than the margins.
+\usepackage{pdflscape}                  % landscape page layout.
+\usepackage{scrlayer-scrpage}           % improved header commands. [supercedes `fancyhdr' package].
+
+\usepackage{eso-pic}                    % watermarks. [xwatermark is not compatible with scrpage. draftwatermark is not included with Tex Live.]
+
+ \usepackage{setspace}                  % line spacing (allows \doublespacing). <-- not for urithesis
+%\usepackage{parskip}                   % [superceded by KOMA]. tidies spacing. 
+
+%\usepackage{titlesec}                  % [superceded by KOMA]. change style of all page      headers, etc.
+%\usepackage{sectsty}                   % [superceded by KOMA]. change style of all sectional headers, etc.
+\usepackage[toc,page]{appendix}         % appendices. [toc adds Appendices to TOC, page adds a page listed Appendices in the document.]
+
+% references
+\usepackage{chngcntr}                   % allows changes mid-document to section depth of equation counter reset.
+\usepackage[titles]{tocloft}            % allows new lists such as \listofequations and \listoflistings.
+                                        % Note: titles option permits header on table of contents and list of figures/tables/etc pages.
+\usepackage{titletoc}                   % allows sub-[tables of contents]. allows increased margin between numbers and labels in toc.
+                                        % IMPORTANT: [breaks \section* commands. use \setcounter{secnumdepth}{0} instead.]
+
+% floats: figures/tables/lists
+\usepackage{float}                      % improves floating objects (graphics/tables).
+
+\usepackage{graphics}
+\usepackage{graphicx}                   % graphics incorporation.
+\usepackage{wrapfig}                    % allows text wrapping of figures.
+\usepackage{subcaption}                 % allow captions with the subcaption command. [automatically loads caption package.]
+
+\usepackage{tabu}                       % improved table commands.
+\usepackage{longtable}                  % allows multipage tables.
+\usepackage{multirow}                   % multirow command.
+\usepackage{bigstrut}                   % bigstrut command. adds slight space up [t], down [b], or both. try next to \hline.
+\usepackage{booktabs}                   % improved hline spacing commands in tables.
+
+\usepackage{enumitem}                   % improved alterations to indent in enumerate/itemize.
+
+% references
+\usepackage{csquotes}                   % required for biblatex when using babel.
+\usepackage{xpatch}                     % required for ieee-style @online no-date fix.
+
+\usepackage[ backend      = biber       % supercedes bibtex
+           , sorting      = none        % none: entries appear in order of \cite use
+           , refsegment   = chapter     % restart numbering at beginning of each chapter
+           , defernumbers = true,       % required for added global bibliography
+           , style        = ieee        % ieee style
+%          , doi          = false       % false for ieee style?
+%          , isbn         = false       % false for ieee style?
+           , citestyle    = numeric,    % \cite{REF:A, REF:B} => [1,2] instead of the default => [1], [2]
+           , url          = true   ]
+            {biblatex}                  % bibliographies (supercedes bibtex, biber, ...)
+
+% hyperref                              % IMPORTANT: Always load hyperref last. It tends to break other packages when loaded first.
+\usepackage[ hidelinks
+           , linktoc   = all     ]
+           {hyperref}                   % hyperlinks.
+
+
+
+
+
+
+
+
+
+

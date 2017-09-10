@@ -1,0 +1,84 @@
+% !TEX spellcheck = English (United States) (Aspell)
+% !TEX TS-program = arara
+%  arara: lmkclean
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: biber
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: pdflatex: { synctex: yes, options: '-file-line-error -halt-on-error' }
+%  arara: lmkclean
+\documentclass[crop=false,float=true,class=scrreprt]{standalone}
+
+\providecommand{\main}{../../../..}
+\input{\main/Subfiles/0-Preamble/0-Preamble.tex}  % Preamble [document configuration]
+
+\begin{document}
+
+
+
+
+The \tif{minseg.m} script was developed to control the MinSeg test platform.
+The script is capable of:
+
+\begin{itemize}[leftmargin=*]
+
+\item Reconfiguring the model
+
+\item Running a model simulation
+
+\item Programming the model hardware
+
+\item Communicating with the model hardware
+  \begin{itemize}[leftmargin=*, label=$\vcenter{\hbox{\tiny$\bullet$}}$]
+  
+  \item Optimizing the communication rate.
+
+  \item Reformatting the raw hardware-output data on receipt.
+  
+  \end{itemize}
+
+\item Saving the initialization parameters and output data.
+
+\item Plotting the output data.
+
+\end{itemize}
+
+The script is hierarchal, and is therefore only the root {\fns\tif{or master}} file
+to a series of subfiles.
+The subfiles are broken up into principal segments of the scripting process:
+
+\begin{itemize}[leftmargin=*]
+
+\item Global setup
+
+\item User-input
+
+\item Initialization
+
+\item Processing
+
+\item Output
+
+\item Global Cleanup
+
+\end{itemize}
+
+
+
+
+\clearpage
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

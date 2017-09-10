@@ -1,0 +1,55 @@
+% !TEX spellcheck = English (United States) (Aspell)
+% !TEX TS-program = arara
+%  arara: lmkclean
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: biber
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: pdflatex: { synctex: yes, options: '-file-line-error -halt-on-error' }
+%  arara: lmkclean
+\documentclass[crop=false,float=true,class=scrreprt]{standalone}
+
+\providecommand{\main}{../../..}
+\input{\main/Subfiles/0-Preamble/0-Preamble.tex}  % Preamble [document configuration]
+
+\begin{document}
+
+
+
+
+%\addtocontents{toc}{\string\setcounter{tocdepth}{2}}
+\startcontents[additionalDynamics]
+
+%\renewcommand{\sectionedEquation}{\thesubsection--\arabic{equation}}
+%\counterwithin*{equation}{subsection}
+
+
+
+
+\section{Additional Dynamics}
+\label{SEC:controllerDesign:additionalDynamics}
+
+\input{\main/Subfiles/2-Main/05-controlDesign/additionalDynamics/00-root.tex}
+\input{\main/Subfiles/2-Main/05-controlDesign/additionalDynamics/background.tex}
+\input{\main/Subfiles/2-Main/05-controlDesign/additionalDynamics/trackingSystem.tex}
+\input{\main/Subfiles/2-Main/05-controlDesign/additionalDynamics/controlGains.tex}
+
+%\renewcommand{\sectionedEquation}{\thesection--\arabic{equation}}
+%\counterwithout*{equation}{subsection}
+
+\stopcontents[additionalDynamics]
+%\addtocontents{toc}{\string\setcounter{tocdepth}{1}}
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

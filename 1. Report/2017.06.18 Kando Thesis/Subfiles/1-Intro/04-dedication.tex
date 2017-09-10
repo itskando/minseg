@@ -1,0 +1,47 @@
+%!!TEX root = ../../2016.02.08_Kando_Thesis.tex
+% !TEX TS-program = arara
+%  arara: lmkclean
+% !arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+% !arara: biber
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: pdflatex: { synctex: yes, options: '-file-line-error -halt-on-error' }
+%  arara: lmkclean
+\documentclass[crop=false,float=true,class=scrreprt]{standalone}
+
+\providecommand{\main}{../..}
+\input{\main/Subfiles/0-Preamble/0-Preamble.tex}  % Preamble [document configuration]
+
+\begin{document}
+
+\chapter*{Dedication}
+\addcontentsline{toc}{chapter}{Dedication}
+
+\hspace{+3em}%
+\begin{minipage}[c][0.5\textheight][c]{0.75\textwidth}
+
+For those who led by example   \\ \hspace*{+0.65em}%
+with an unyielding optimism    \\ \hspace*{+1.55em}%
+and a devotion to the field    \\ \hspace*{+2.7em}%
+which has only enriched;       \\
+
+for Laura and for Professor Richard Vaccaro.\\[+0.5em]
+
+Thank you for your own sizable accomplishments\\
+\hspace*{+1em}and for your guidance in mine.
+
+\vspace{+0.05\textheight}
+
+\end{minipage}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

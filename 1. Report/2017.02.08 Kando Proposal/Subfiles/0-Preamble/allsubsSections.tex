@@ -1,0 +1,49 @@
+% Section numbering: Table of contents and section depth
+\newcounter{xTocdepth}    \setcounter{xTocdepth}   {2} % These are used in multiple locations.
+\newcounter{xSecnumdepth} \setcounter{xSecnumdepth}{5} % These are used in multiple location.
+
+\setcounter{tocdepth}    {\thexTocdepth}
+\setcounter{secnumdepth} {\thexSecnumdepth}
+
+
+
+
+% Command: Subsection 
+% -[Interchange paragraph and subparagraph with their subsubsubparagraph and subsubsubsub paragraph equivalents].
+\newcommand{\subsubsubsection}     [1] {                                \paragraph{#1}                                            }
+\newcommand{\subsubsubsectionA}    [1] { \setcounter{secnumdepth}{0}    \paragraph{#1} \setcounter{secnumdepth}{\thexSecnumdepth} }
+\newcommand{\paragraphA}           [1] { \setcounter{secnumdepth}{0}    \paragraph{#1} \setcounter{secnumdepth}{\thexSecnumdepth} }
+\newcommand{\subsubsubsubsection}  [1] {                             \subparagraph{#1}                                            }
+\newcommand{\subsubsubsubsectionA} [1] { \setcounter{secnumdepth}{0} \subparagraph{#1} \setcounter{secnumdepth}{\thexSecnumdepth} }
+\newcommand{\subparagraphA}        [1] { \setcounter{secnumdepth}{0} \subparagraph{#1} \setcounter{secnumdepth}{\thexSecnumdepth} }
+
+
+% Format paragraph and subparagraph exactly like subsection.
+% -subsubsection is formatted like subsection by default.
+\makeatletter
+
+\renewcommand{\paragraph}               %
+  {\@startsection{paragraph}{4}{\z@}    %
+  {-2.5ex\@plus -1ex \@minus -.25ex}    %
+  {1.25ex \@plus .25ex}                 %
+  {\normalfont\sffamily\normalsize\bfseries}     }
+
+\renewcommand{\subparagraph}            %
+  {\@startsection{subparagraph}{5}{\z@} %
+  {-2.5ex\@plus -1ex \@minus -.25ex}    %
+  {1.25ex \@plus .25ex}                 %
+  {\normalfont\sffamily\normalsize\bfseries}     }
+
+\makeatother
+
+
+
+
+
+
+
+
+
+
+
+

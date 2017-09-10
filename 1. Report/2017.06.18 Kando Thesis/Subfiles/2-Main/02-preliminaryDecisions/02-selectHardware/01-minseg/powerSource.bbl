@@ -1,0 +1,52 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{none/global/}
+    \entry{REF:online:powerstream:batteryDrainage}{online}{}
+      \name{author}{1}{}{%
+        {{hash=6580b6b07100171bd8ccac20334a24b6}{%
+           family={PowerStream},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{6580b6b07100171bd8ccac20334a24b6}
+      \strng{fullhash}{6580b6b07100171bd8ccac20334a24b6}
+      \strng{authornamehash}{6580b6b07100171bd8ccac20334a24b6}
+      \strng{authorfullhash}{6580b6b07100171bd8ccac20334a24b6}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{29}
+      \field{month}{6}
+      \field{title}{Discharge tests of AA Batteries, Alkaline and NiMH}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.powerstream.com/AA-tests.htm
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

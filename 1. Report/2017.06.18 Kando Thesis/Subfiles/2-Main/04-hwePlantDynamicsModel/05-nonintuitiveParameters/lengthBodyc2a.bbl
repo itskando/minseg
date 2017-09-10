@@ -1,0 +1,80 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{none/global/}
+    \entry{REF:online:2009-yamamoto}{online}{}
+      \name{author}{1}{}{%
+        {{hash=c50360c71d896d22ac04a49216b3a796}{%
+           family={Yamamoto},
+           familyi={Y\bibinitperiod},
+           given={Yorihisa},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{c50360c71d896d22ac04a49216b3a796}
+      \strng{fullhash}{c50360c71d896d22ac04a49216b3a796}
+      \strng{authornamehash}{c50360c71d896d22ac04a49216b3a796}
+      \strng{authorfullhash}{c50360c71d896d22ac04a49216b3a796}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{month}{5}
+      \field{title}{NXTway-GS (Self-Balancing Two-Wheeled Robot) Controller Design}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.mathworks.com/matlabcentral/fileexchange/19147-nxtway-gs--self-balancing-two-wheeled-robot--controller-design
+      \endverb
+    \endentry
+    \entry{REF:textbook:1995-vaccaro}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ef1a20e284278af5b4c0417fe78a0b58}{%
+           family={Vaccaro},
+           familyi={V\bibinitperiod},
+           given={Richard\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Mcgraw-Hill College}%
+      }
+      \strng{namehash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \strng{fullhash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \strng{authornamehash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \strng{authorfullhash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0070667815}
+      \field{month}{1}
+      \field{series}{Mcgraw Hill Series in Electrical and Computer Engineering}
+      \field{title}{Digital Control: A State-space Approach}
+      \field{year}{1995}
+      \field{dateera}{ce}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

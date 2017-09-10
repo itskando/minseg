@@ -1,0 +1,65 @@
+\begin{thebibliography}{10}
+
+\bibitem{REF:Textbook:1995-Vaccaro}
+{Vaccaro, Richard J.}, {\em {Digital Control: A State-space Approach}}.
+\newblock {Mcgraw Hill Series in Electrical and Computer Engineering},
+  {Mcgraw-Hill College}, {January} {1995}.
+
+\bibitem{REF:Article:2013-Chan}
+{Chan, Ronald Ping Man and Stol, Karl A. and Halkyard, C. Roger }, ``{Review of
+  modelling and control of two-wheeled robots},'' {\em {Annual Reviews in
+  Control}}, vol.~{37}, pp.~{89--103}, {April} {2013}.
+
+\bibitem{REF:Thesis:Masters:2012-Peltier}
+{Peltier, Michael D.}, ``{Trajectory Control of a Two-Wheeled Robot},''
+  Master's thesis, {University of Rhode Island (URI): Department of Electrical
+  Engineering}, {January} {2012}.
+
+\bibitem{REF:Conference:2010-Jones}
+{Jones, Daniel R. and Stol, Karl A. }, ``{Modelling and Stability Control of
+  Two-Wheeled Robots in Low-Traction Environments},'' in {\em {Australasian
+  Conference on Robotics and Automation (ACRA) 2010}} ({Wyeth, Gordon and
+  Upcroft, Ben}, ed.), ({Brisbane, Australia}), {Australian Robotics \&
+  Automation Association (ARAA)}, {December} {2010}.
+
+\bibitem{REF:Thesis:Undergraduate:2011-Bageant}
+{Bageant, Maia R.}, ``{Balancing a Two-Wheeled Segway Robot},'' {October}
+  {2011}.
+\newblock {Undergraduate Thesis}.
+
+\bibitem{REF:Thesis:Masters:2014-daSilva}
+{da Silva Jr, Airton R.}, ``{Design and Control of a Two-Wheeled Robotic
+  Walker},'' Master's thesis, {University of Massachusettes (UMass): Department
+  of Mechanical and Industrial Engineering}, {May} {2014}.
+
+\bibitem{REF:Conference:2015-Gong}
+{Gong, Yulei and Huijiao Ma and Xiao Wu }, ``{Research on Control Strategy of
+  Two-wheeled Self-balancing Robot},'' in {\em {2015 International Conference
+  on Computer Science and Mechanical Automation (CSMA)}}, ({Hangzhou, China}),
+  {IEEE}, {October} {2015}.
+
+\bibitem{REF:Textbook:1995-Lewis}
+{Lewis, Frank L. and yrmos, Vassilis L.}, {\em {Optimal Control}}.
+\newblock {Wiley-Interscience}, {Second}~ed., {November} {1995}.
+
+\bibitem{REF:Textbook:2001-DeLuca}
+{De Luca, Alessandro and Oriolo, Giuseppe and Vendittelli, Marilena }, {\em
+  {Control of Wheeled Mobile Robots: An Experimental Overview}},
+  pp.~{181--226}.
+\newblock {Berlin, Heidelberg}: {Springer Berlin Heidelberg}, {2001}.
+
+\bibitem{REF:Conference:2014-Jamil}
+{Jamil, Osama and Jamil, Mosin and Ayaz, Yasar and Ahmad Khubab }, ``{Modeling,
+  Control of a Two-Wheeled Self-Balancing Robot},'' in {\em {2014 International
+  Coneference on Robotics and Emerging Allied Technologies in Engineering
+  (iCREATE)}}, ({Islamabad, Pakistan}), {IEEE}, {April} {2014}.
+
+\bibitem{REF:Conference:2014-Vaccaro}
+{Vaccaro, Richard J.}, ``{An Optimization Approach to the Pole-Placement Design
+  of Robust Linear Multivariable Control Systems},'' in {\em {2014 American
+  Control Conference (ACC)}}, ({Portland, OR, USA}), {ACC}, {June} {2014}.
+
+\bibitem{REF:Interview:2017-01-23-Vaccaro}
+{Vaccaro, Richard J.} {Personal Interview}, {January 23} {2017}.
+
+\end{thebibliography}

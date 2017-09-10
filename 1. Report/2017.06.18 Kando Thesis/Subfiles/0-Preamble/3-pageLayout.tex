@@ -1,0 +1,105 @@
+% Page size, margin, and header/footer settings:
+
+% Enable "showframe" when editing margins
+%\usepackage{showframe}                                            % Uncomment this to display header/footer/margins outlines.
+
+% General margin settings:
+ \newlength{\xhmargin   } \setlength  {\xhmargin   }{+1.000in    }
+ \newlength{\xlmargin   } \setlength  {\xlmargin   }{+1.500in    }
+ \newlength{\xrmargin   } \setlength  {\xrmargin   }{\xhmargin   }
+  
+ \newlength{\xtmargin   } \setlength  {\xtmargin   }{+1.000in    } % [0.500in] Actual tmargin = [\xtmargin - \xheadheight]
+ \newlength{\xbmargin   } \setlength  {\xbmargin   }{+1.000in    } % [0.500in] Actual bmargin = [\xbmargin - \xfootskip  ]
+
+% Header  margin settings:
+ \newlength{\xheadheight} \setlength  {\xheadheight}{+0.500in    } % May need to adjust tmargin in addition to this.
+ \newlength{\xheadsep   } \setlength  {\xheadsep   }{+1.000em    }
+
+% Footer  margin settings:
+ \newlength{\xfootheight} \setlength  {\xfootheight}{+0.500in    } % May need to adjust bmargin in addition to this.
+ \newlength{\xfootskip  } \setlength  {\xfootskip  }{\xfootheight} % [footskip = footheight - 1em + desired footsep]
+                          \addtolength{\xfootskip  }{-1.000em    } % <-- do not edit
+                          \addtolength{\xfootskip  }{+1.000em    } % <-- do     edit: desired footsep
+
+
+
+\KOMAoptions{headheight    = \xheadheight,
+             footheight    = \xfootheight,
+             DIV           = current,
+             fontsize      = 10pt,
+             parskip       = half-,
+             toc           = chapterentrydotfill,
+           % headings      = small,
+           % headings      = openany,
+             headings      = twolinechapter}
+
+\geometry{letterpaper,
+          tmargin       = \xtmargin,
+          bmargin       = \xbmargin,
+          lmargin       = \xlmargin,
+          rmargin       = \xrmargin,
+          headsep       = \xheadsep,
+          footskip      = \xfootskip}
+
+\savegeometry{default}
+
+
+
+
+% Initialize double-spacing
+\doublespacing
+
+
+
+
+% Section headings
+
+%\setkomafont{sectioning}   {\bfseries}
+%\setkomafont{chapter}      {\nms}
+%\setkomafont{section}      {\nms}
+%\setkomafont{subsection}   {\nms}
+%\setkomafont{subsubsection}{\nms}
+%\setkomafont{paragraph}    {\nms}
+%\setkomafont{subparagraph} {\nms}
+
+\RedeclareSectionCommands[font       =  \nms,
+                          beforeskip =  0pt,            % vspace before  chapter heading
+                          innerskip  = -\parskip,       % vspace between chapter heading lines
+                          afterskip  =  1\baselineskip] % vspace after   chapter heading
+                         {chapter}
+                         
+\RedeclareSectionCommands[font       =  \nms,
+                          afterskip  =  0.001em] % 0em puts the text inline with the heading. >.<
+                          {section,subsection,subsubsection,paragraph,subparagraph}
+
+% Make the word Chapter uppercase (but not the section heading label)
+% Add a visible horizontal line
+\renewcommand*{\chapterformat}{%
+  \MakeUppercase{\chapappifchapterprefix{\nobreakspace}}\thechapter\autodot%
+    \IfUsePrefixLine{%
+        \par\nobreak\vspace*{-\parskip}\vspace*{-.6\baselineskip}%
+        \rule{0.75\textwidth}{.5pt}%
+}{\enskip}}%
+
+
+\renewcommand\raggedchapter{\centering}
+
+
+% Initialize headers and footers
+
+\setkomafont{pageheadfoot}{\normalfont\normalcolor}
+
+% Header: Center:
+\chead{\fns}
+
+% Footer: Center:
+\cfoot{\thepage}
+
+% Footer: Right-Side:
+\ofoot{\fns}
+
+% Header/footer enable/disable switch
+\newpairofpagestyles{trueempty}{}
+%  Enable: \pagestyle{scrheadings} [this is the default.]
+% Disable: \pagestyle{trueempty}
+

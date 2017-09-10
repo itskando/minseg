@@ -1,0 +1,479 @@
+% !TEX TS-program = arara
+%  arara: lmkclean
+% !arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+% !arara: bibtex
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: pdflatex: { synctex: yes, options: '-file-line-error -halt-on-error' }
+%  arara: lmkclean
+\documentclass[crop=false,float=true,class=scrreprt]{standalone}
+
+\providecommand{\main}{../..}
+\input{\main/Subfiles/0-Preamble/0-Preamble.tex}  % Preamble [document configuration]
+
+\begin{document}
+
+\chapter{Code Listings}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\iffalse% Template:
+% NOTE: Don't    [{  whole caption                    }] and {{  whole caption                    }}. 
+%       Only do: [ {[captionWithBraces]}: restOfCaption] and { {[captionWithBraces]}: restOfCaption}.
+\lstinputlisting[caption    = {%
+                   [%
+                    {[Verification:Multidim]}: Multidimensionalizing the Standard Input Data
+                    (\tif{excerpt from: test\_fftPlus.m})
+                   ]%
+                   {%
+                    {[Verification:Multidim]}: Multidimensionalizing the Standard Input Data\\
+                    (\tif{excerpt from: b\_test\_fftPlus\_multidim.m})
+                   }%
+                   },
+                 label      = COD:Verification:Multidim:InputData,
+                 linerange  = {\%\%\ [Case:\ Multidim\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ]:\ Multidimesionalize\ input}%
+                              -%
+                              {\%\%\ [Case:\ Multidim:\ fft\ \ \ \ \ \ \ \ \ \ \ ]:\ \ fft\ \ \ \ \ \ \ \ \ :\ dim\ =\ (no\ input)}%
+                ]%
+                {\main/CodeListings/b_test_fftPlus_multidim.m}
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{minseg.m}
+
+\lstinputlisting[caption    = {%
+                   [%
+                    {[minseg.m]}: Root file
+                   ]%
+                   {%
+                    {[minseg.m]}: Root file
+                   }%
+                 },
+                 label      = COD:matlab:minseg,
+                ]%
+                {\main/CodeListings/minseg.m}
+
+\clearpage
+
+
+
+
+\subsection{Global Setup}
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Global Setup
+                   }%
+                 },
+                 label      = COD:matlab:minseg:global,
+                ]%
+                {\main/CodeListings/minseg_0p0p0p0_global.m}
+
+\clearpage
+
+
+
+
+\subsection{User Inputs}
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: User Inputs
+                   }%
+                 },
+                 label      = COD:matlab:minseg:userInputs,
+                ]%
+                {\main/CodeListings/minseg_1p0p0p0_input.m}
+
+\clearpage
+
+
+
+
+\subsection{Initialization}
+
+
+
+
+\clearpage
+
+
+
+
+\subsubsection{General}
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Initialization - General
+                   }%
+                 },
+                 label      = COD:matlab:minseg:initialization:general,
+                ]%
+                {\main/CodeListings/minseg_2p0p0p0_init_general.m}
+
+\clearpage
+
+                
+
+
+\subsubsection{Model}
+
+
+
+
+\clearpage
+
+
+
+
+\subsubsubsection{General}
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Initialization - Model - General
+                   }%
+                 },
+                 label      = COD:matlab:minseg:initialization:model:general,
+                ]%
+                {\main/CodeListings/minseg_2p1p0p0_init_model_general.m}
+
+\clearpage
+
+
+
+
+\subsubsubsection{Plant}
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Initialization - Model - Plant
+                   }%
+                 },
+                 label      = COD:matlab:minseg:initialization:model:plant,
+                ]%
+                {\main/CodeListings/minseg_2p1p1p0_init_model_plant.m}
+
+\clearpage
+
+
+
+
+\subsubsubsubsection{Hardware}
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Initialization - Model - Plant - Hardware
+                   }%
+                 },
+                 label      = COD:matlab:minseg:initialization:model:plant:hardware,
+                ]%
+                {\main/CodeListings/minseg_2p1p1p1_init_model_plant_hardware.m}
+
+\clearpage
+
+
+
+
+\subsubsubsubsection{Nonlinear Dynamics Model}
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Initialization - Model - Plant - Nonlinear Dynamics Model
+                   }%
+                 },
+                 label      = COD:matlab:minseg:initialization:model:plant:nonlinear,
+                ]%
+                {\main/CodeListings/minseg_2p1p1p2_init_model_plant_nonlinearDynamics.m}
+
+\clearpage
+
+
+
+
+\subsubsubsubsection{Linear Dynamics Model}
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Initialization - Model - Plant - Linear Dynamics Model
+                   }%
+                 },
+                 label      = COD:matlab:minseg:initialization:model:plant:linear,
+                ]%
+                {\main/CodeListings/minseg_2p1p1p3_init_model_plant_linearDynamics.m}
+
+\clearpage
+
+
+
+
+\subsubsubsection{Controller}
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Initialization - Model - Controller
+                   }%
+                 },
+                 label      = COD:matlab:minseg:initialization:model:controller,
+                ]%
+                {\main/CodeListings/minseg_2p1p2p0_init_model_controller.m}
+
+\clearpage
+
+
+
+\subsubsubsection{Board Inputs and Outputs}
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Initialization - Model - User-Defined Board Inputs and Outputs
+                   }%
+                 },
+                 label      = COD:matlab:minseg:initialization:model:io,
+                ]%
+                {\main/CodeListings/minseg_2p1p3p0_init_model_io.m}
+
+\clearpage
+
+
+
+
+\subsubsubsection{Build Parameters}
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Initialization - Model - Model Build Parameters
+                   }%
+                 },
+                 label      = COD:matlab:minseg:initialization:model:build,
+                ]%
+                {\main/CodeListings/minseg_2p1p9p0_init_model_build.m}
+
+\clearpage
+
+
+
+
+\subsubsection{Serial}
+
+
+\clearpage
+
+
+
+
+\subsubsubsection{Write}
+
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Initialization - Serial - Write
+                   }%
+                 },
+                 label      = COD:matlab:minseg:initialization:serial:write,
+                ]%
+                {\main/CodeListings/minseg_2p2p0p0_init_serial_write.m}
+
+\clearpage
+
+
+
+
+\subsubsubsection{Read}
+
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Initialization - Serial - Read
+                   }%
+                 },
+                 label      = COD:matlab:minseg:initialization:serial:read,
+                ]%
+                {\main/CodeListings/minseg_2p2p1p0_init_serial_read.m}
+
+\clearpage
+
+
+
+
+\subsubsubsection{General}
+
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Initialization - Serial - General
+                   }%
+                 },
+                 label      = COD:matlab:minseg:initialization:serial:general,
+                ]%
+                {\main/CodeListings/minseg_2p2p2p0_init_serial_general.m}
+
+\clearpage
+
+
+
+
+\subsubsubsection{Reads}
+
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Initialization - Serial - Reads
+                   }%
+                 },
+                 label      = COD:matlab:minseg:initialization:serial:reads,
+                ]%
+                {\main/CodeListings/minseg_2p2p3p0_init_serial_reads.m}
+
+\clearpage
+
+
+
+
+\subsubsubsection{Build Parameters}
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Initialization - Serial - Model Build Parameters
+                   }%
+                 },
+                 label      = COD:matlab:minseg:initialization:serial:build,
+                ]%
+                {\main/CodeListings/minseg_2p2p9p0_init_model_build.m}
+
+\clearpage
+
+
+
+
+\subsection{Processing}
+
+
+
+
+\clearpage
+
+
+
+
+\subsubsection{Build}
+
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Processing - Build
+                   }%
+                 },
+                 label      = COD:matlab:minseg:processing:build,
+                ]%
+                {\main/CodeListings/minseg_3p0p0p0_process_build.m}
+
+\clearpage
+
+
+
+
+\subsubsection{Serial Transmission}
+
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Processing - Serial - Transmit
+                   }%
+                 },
+                 label      = COD:matlab:minseg:processing:serial:transmit,
+                ]%
+                {\main/CodeListings/minseg_3p1p0p0_process_serial_transmit.m}
+
+\clearpage
+
+
+
+
+\subsubsection{Serial Reads Post-Processing}
+
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Processing - Serial - Reads
+                   }%
+                 },
+                 label      = COD:matlab:minseg:processing:serial:reads,
+                ]%
+                {\main/CodeListings/minseg_3p2p0p0_process_serial_reads.m}
+
+\clearpage
+
+
+
+
+\subsection{Output}
+
+
+
+
+\clearpage
+
+
+
+
+\subsubsection{Save}
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Output - Save
+                   }%
+                 },
+                 label      = COD:matlab:minseg:output:save,
+                ]%
+                {\main/CodeListings/minseg_4p0p0p0_output_save.m}
+
+\clearpage
+
+
+
+
+\subsubsection{Serial Reads Plot}
+
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Output - Serial - Reads - Plot
+                   }%
+                 },
+                 label      = COD:matlab:minseg:output:serial:reads:plot,
+                ]%
+                {\main/CodeListings/minseg_4p1p0p0_output_serial_plot.m}
+
+\clearpage
+
+
+
+
+\subsection{Global Cleanup}
+
+\lstinputlisting[caption    = {%
+                   {%
+                    {[minseg.m]}: Global Cleanup
+                   }%
+                 },
+                 label      = COD:matlab:minseg:global:cleanup,
+                ]%
+                {\main/CodeListings/minseg_5p0p0p0_cleanup.m}
+
+\clearpage
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

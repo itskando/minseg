@@ -1,0 +1,78 @@
+% !TEX spellcheck = English (United States) (Aspell)
+% !TEX TS-program = arara
+%  arara: lmkclean
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: biber
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: pdflatex: { synctex: yes, options: '-file-line-error -halt-on-error' }
+%  arara: lmkclean
+\documentclass[crop=false,float=true,class=scrreprt]{standalone}
+
+\providecommand{\main}{../../../..}
+\input{\main/Subfiles/0-Preamble/0-Preamble.tex}  % Preamble [document configuration]
+
+\begin{document}
+
+
+%\addtocontents{toc}{\string\setcounter{tocdepth}{2}}
+%\startcontents[preliminaryDecisions:selectionHardware]
+
+%\renewcommand{\sectionedEquation}{\thesubsection--\arabic{equation}}
+%\counterwithin*{equation}{subsection}
+
+
+
+
+\subsection{MinSeg M2V3 Two-Wheeled Robot}
+\label{SEC:preliminaryDecisions:selectHardware:minseg}
+
+
+\iffalse
+
+
+\singlespacing%
+\printcontents[preliminaryDecisions:selectionHardware]{}{1}{%
+  \addtocontents{ptc}{\string\setcounter{tocdepth}{5}}%
+% 
+  \subsection*{List of Contents}%
+% \addcontentsline{toc}{subsection}{List of Contents}%
+  }%
+\doublespacing%
+\clearpage
+
+
+\fi
+
+
+\input{\main/Subfiles/2-Main/02-preliminaryDecisions/02-selectHardware/01-minseg/00-root.tex}
+\input{\main/Subfiles/2-Main/02-preliminaryDecisions/02-selectHardware/01-minseg/components.tex}
+\input{\main/Subfiles/2-Main/02-preliminaryDecisions/02-selectHardware/01-minseg/arduino.tex}
+\input{\main/Subfiles/2-Main/02-preliminaryDecisions/02-selectHardware/01-minseg/bluetoothModule.tex}
+\input{\main/Subfiles/2-Main/02-preliminaryDecisions/02-selectHardware/01-minseg/powerSource.tex}
+\input{\main/Subfiles/2-Main/02-preliminaryDecisions/02-selectHardware/01-minseg/motorDriver.tex}
+\input{\main/Subfiles/2-Main/02-preliminaryDecisions/02-selectHardware/01-minseg/motorGearboxEncoder.tex}
+\input{\main/Subfiles/2-Main/02-preliminaryDecisions/02-selectHardware/01-minseg/gyroAccel.tex}
+\input{\main/Subfiles/2-Main/02-preliminaryDecisions/02-selectHardware/01-minseg/arduinoInterfaces.tex}
+
+
+
+
+%\renewcommand{\sectionedEquation}{\thesection--\arabic{equation}}
+%\counterwithout*{equation}{subsection}
+
+%\stopcontents[preliminaryDecisions:selectionHardware]
+%\addtocontents{toc}{\string\setcounter{tocdepth}{1}}
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

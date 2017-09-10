@@ -1,0 +1,54 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{none/global/}
+    \entry{REF:online:2009-yamamoto}{online}{}
+      \name{author}{1}{}{%
+        {{hash=c50360c71d896d22ac04a49216b3a796}{%
+           family={Yamamoto},
+           familyi={Y\bibinitperiod},
+           given={Yorihisa},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{c50360c71d896d22ac04a49216b3a796}
+      \strng{fullhash}{c50360c71d896d22ac04a49216b3a796}
+      \strng{authornamehash}{c50360c71d896d22ac04a49216b3a796}
+      \strng{authorfullhash}{c50360c71d896d22ac04a49216b3a796}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{month}{5}
+      \field{title}{NXTway-GS (Self-Balancing Two-Wheeled Robot) Controller Design}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.mathworks.com/matlabcentral/fileexchange/19147-nxtway-gs--self-balancing-two-wheeled-robot--controller-design
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

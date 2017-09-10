@@ -1,0 +1,165 @@
+% !TEX TS-program = arara
+%  arara: lmkclean
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: biber
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: pdflatex: { synctex: yes, options: '-file-line-error -halt-on-error' }
+%  arara: lmkclean
+\documentclass[crop=false,float=true,class=scrreprt]{standalone}
+
+\providecommand{\main}{../../../..}
+\input{\main/Subfiles/0-Preamble/0-Preamble.tex}  % Preamble [document configuration]
+
+\begin{document}
+
+\subsection{Tracking System}
+\label{SEC:controllerDesign:additionalDynamics:trackingSystem}
+
+Additional dynamics may be incorporated to improve reference tracking.
+When implemented for this purpose, the additional dynamics are known as a tracking system.
+
+In the case of a tracking system, 
+an \tif{integrator} may be implemented as the additional dynamics
+to track a constant reference exactly, or 
+to track a slowly varying reference approximately.
+
+Integrators are also able to mitigate constant disturbances.
+Incidentally, the MinSeg M2V3 system uses gyroscopes as body angular velocity $\psi$ sensors.
+Bias is inherent in the output of a gyroscope;
+therefore, the use of such an integrator as a tracking system has an additional benefit:
+it will mitigate the effects of bias from a gyroscope output, 
+whether directly or within terms which are derivative of the gyroscope output.
+
+Thus, in the case of the two-wheeled robot, 
+integrators are implemented as additional dynamics for the states representing 
+wheel angular position $\theta$ and body angular position (yaw) $\phi_{y}$.
+This establishes a tracking system, {\fns[\tif{an augmented method of state feedback regulation}]}, for the system.
+The state-space representation of the integrator is exhibited in Equation~%
+\eqref{EQN:controllerDesign:additionalDynamics:trackingSystem:integrator:analog}.
+
+\vspace{-0em}
+
+\begin{equation}
+\label{EQN:controllerDesign:additionalDynamics:trackingSystem:integrator:analog}
+\begin{array}{ccccccccc}
+\uns{\mbf{\dot{x}}(t)}{n x 1}
+& = &
+\begin{bmatrix}
+0 & 0 \\
+0 & 0 \\
+\end{bmatrix}
+& \cdot &
+\uns{\mbf{x}(t)}{n x 1} 
+& + & 
+\begin{bmatrix}
+1 & 0 \\
+0 & 1 \\
+\end{bmatrix}
+& \cdot &
+\begin{bmatrix}
+e_{\theta_{\hphantom{y}}} (t) \\
+e_{\phi_{y}}              (t) \\
+\end{bmatrix}
+\\[+2em]
+\uns{\mbf{y}(t)}{m x 1}
+& = &
+\begin{bmatrix}
+1 & 0 \\
+0 & 1 \\
+\end{bmatrix}
+& \cdot &
+\uns{\mbf{x}(t)}{n x 1}
+& + &
+\begin{bmatrix}
+0 & 0 \\
+0 & 0 \\
+\end{bmatrix}
+& \cdot &
+\begin{bmatrix}
+e_{\theta_{\hphantom{y}}} (t) \\
+e_{\phi_{y}}              (t) \\
+\end{bmatrix}
+\end{array}
+\end{equation}
+
+
+
+
+\clearpage
+
+
+
+
+\subsubsection{Discrete Additional Dynamics}
+
+
+Since the additional dynamics will be processed on a microcontroller,
+the additional dynamics will be digital;
+thus, a continuous-to-discrete conversion will be necessary.
+A digital integrator is an established case which is exhibited in Equation~%
+\eqref{EQN:controllerDesign:additionalDynamics:trackingSystem:integrator:discrete}.
+
+\vspace{-0em}
+
+\begin{equation}
+\label{EQN:controllerDesign:additionalDynamics:trackingSystem:integrator:discrete}
+\begin{array}{ccccccccc}
+\uns{\mbf{\dot{x}}[k+1]}{n x 1}
+& = &
+\begin{bmatrix}
+1 & 0 \\
+0 & 1 \\
+\end{bmatrix}
+& \cdot &
+\uns{\mbf{x}[k]}{n x 1}
+& + & 
+\begin{bmatrix}
+1 & 0 \\
+0 & 1 \\
+\end{bmatrix}
+& \cdot &
+\begin{bmatrix}
+e_{\theta_{\hphantom{y}}} [k] \\
+e_{\phi_{y}}              [k] \\
+\end{bmatrix}
+\\[+2em]
+\uns{\mbf{y}[k]}{m x 1}
+& = &
+\begin{bmatrix}
+1 & 0 \\
+0 & 1 \\
+\end{bmatrix}
+& \cdot &
+\uns{\mbf{x}[k]}{n x 1}
+& + &
+\begin{bmatrix}
+0 & 0 \\
+0 & 0 \\
+\end{bmatrix}
+& \cdot &
+\begin{bmatrix}
+e_{\theta_{\hphantom{y}}} [k] \\
+e_{\phi_{y}}              [k] \\
+\end{bmatrix}
+\end{array}
+\end{equation}
+
+
+
+
+\clearpage
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

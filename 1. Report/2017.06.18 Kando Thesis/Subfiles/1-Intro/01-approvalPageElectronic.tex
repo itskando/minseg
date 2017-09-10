@@ -1,0 +1,85 @@
+%!!TEX root = ../../2016.02.08_Kando_Thesis.tex
+% !TEX spellcheck = English
+% !TEX TS-program = arara
+%  arara: lmkclean
+% !arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+% !arara: bibtex
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: pdflatex: { synctex: yes, options: '-file-line-error -halt-on-error' }
+%  arara: lmkclean
+\documentclass[crop=false,float=true,class=scrreprt]{standalone}
+
+\providecommand{\main}{../..}
+\input{\main/Subfiles/0-Preamble/0-Preamble.tex}  % Preamble [document configuration]
+
+\begin{document}
+
+
+
+
+\begin{center}
+%
+%
+\uppercase{% IMPORTANT: \uppercase can handle multiple lines, but CANNOT handle commands. 
+%                   Use \MakeUppercase for commands providing text within \uppercase.
+\MakeUppercase{\uiDegree} Thesis\\
+By\\
+\MakeUppercase{\uiAuthor}%
+}
+
+
+
+\vspace*{\fill}
+
+
+
+%\framebox{% Uncomment framebox to see parbox limits
+\parbox{0.85\textwidth}{%
+\uppercase{Approved:}\\
+\hspace*{+3em}Thesis Committee:\\[+0.5em]
+\hspace*{+6em}\begin{tabular}{@{} r @{\hspace*{+1em}} l @{}}% below, was:\\[-0.5em]  \cline{2-2} \\[-2.5em]
+               Major Professor & \MakeUppercase{\uiMajorProfessor}       \\[-1.0em] %\cline{2-2} \\[-2.5em]
+                               & \hspace*{+22.5em}                       \\[-0.0em]
+                               & \MakeUppercase{\uiCommitteMemberB}      \\[-1.0em] %\cline{2-2} \\[-2.5em]
+                               &                                         \\[-0.0em]
+                               & \MakeUppercase{\uiCommitteMemberC}      \\[-1.0em] %\cline{2-2} \\[-2.5em]
+                               &                                         \\[-0.0em]
+                               & \MakeUppercase{\uiDeanGraduateCollege}  \\[-1.0em] %\cline{2-2} \\[-2.5em]
+                               & \uppercase{Dean of the Graduate School} \\
+              \end{tabular}%
+}%
+%}
+
+
+
+\vspace*{\fill}
+
+
+
+\uppercase{
+University of Rhode Island\\
+\MakeUppercase{\uiYear}
+}%
+%
+%
+\end{center}
+
+
+
+
+
+\clearpage
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+

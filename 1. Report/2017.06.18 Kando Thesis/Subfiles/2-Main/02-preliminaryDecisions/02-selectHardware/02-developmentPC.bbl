@@ -1,0 +1,108 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{none/global/}
+    \entry{REF:online:everymac:macbookpro:2015}{online}{}
+      \name{author}{1}{}{%
+        {{hash=f2096094ea2f20b83e0a5d85b7b3503b}{%
+           family={{Everymac}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{f2096094ea2f20b83e0a5d85b7b3503b}
+      \strng{fullhash}{f2096094ea2f20b83e0a5d85b7b3503b}
+      \strng{authornamehash}{f2096094ea2f20b83e0a5d85b7b3503b}
+      \strng{authorfullhash}{f2096094ea2f20b83e0a5d85b7b3503b}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{22}
+      \field{month}{5}
+      \field{title}{Apple MacBook Pro "Core i5" 2.7 13" Early 2015 Specs}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.7-13-early-2015-retina-display-specs.html
+      \endverb
+    \endentry
+    \entry{REF:online:mathworks:supportedCompilers}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8f631b769d4710fba49eafd295c9d96d}{%
+           family={{Mathworks}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f631b769d4710fba49eafd295c9d96d}
+      \strng{fullhash}{8f631b769d4710fba49eafd295c9d96d}
+      \strng{authornamehash}{8f631b769d4710fba49eafd295c9d96d}
+      \strng{authorfullhash}{8f631b769d4710fba49eafd295c9d96d}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Previous Releases: System Requirements and Supported Compilers}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.mathworks.com/support/sysreq/previous_releases.html
+      \endverb
+    \endentry
+    \entry{REF:online:hurst:minsegDrivers}{online}{}
+      \name{author}{1}{}{%
+        {{hash=cc4fa10e51575cf111e3ba298c6f836d}{%
+           family={Hurst},
+           familyi={H\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Rensselaer Polytechnic Institute (RPI)}%
+      }
+      \strng{namehash}{cc4fa10e51575cf111e3ba298c6f836d}
+      \strng{fullhash}{cc4fa10e51575cf111e3ba298c6f836d}
+      \strng{authornamehash}{cc4fa10e51575cf111e3ba298c6f836d}
+      \strng{authorfullhash}{cc4fa10e51575cf111e3ba298c6f836d}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{17}
+      \field{month}{6}
+      \field{title}{Rensselaer Arduino Support Package Library (RASPLib)}
+      \field{titleaddon}{1.1}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.mathworks.com/matlabcentral/fileexchange/62702-rensselaer-arduino-support-package-library--rasplib-
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

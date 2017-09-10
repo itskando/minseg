@@ -1,0 +1,80 @@
+#--------------------------- Tool Specifications -------------------------
+#
+# Modify the following macros to reflect the tools you wish to use for
+# compiling and linking your code.
+#
+CC = /Applications/MATLAB_R2017a.app/bin/mex
+LD = $(CC)
+ 
+MODEL  = lab5_2
+TARGET = cgxe
+MODULE_SRCS 	= m_8QRJW8zO6Xs0nwwo81gbq.c m_xBxnxqfUTgHAmN996LyRwC.c
+MODEL_SRC	= lab5_2_cgxe.c
+MODEL_REG    = lab5_2_cgxe_registry.c
+MAKEFILE    = lab5_2_cgxe.mku
+MATLAB_ROOT	= /Applications/MATLAB_R2017a.app
+BUILDARGS   = 
+#------------------------------ Include/Lib Path ------------------------------
+ 
+
+ 
+USER_INCLUDES = 
+MLSL_INCLUDES     = \
+    -I"/Applications/MATLAB_R2017a.app/extern/include" \
+    -I"/Applications/MATLAB_R2017a.app/simulink/include" \
+    -I"/Applications/MATLAB_R2017a.app/rtw/c/src"
+
+THIRD_PARTY_INCLUDES = 
+
+INCLUDE_PATH = $(MLSL_INCLUDES) $(USER_INCLUDES) $(THIRD_PARTY_INCLUDES)
+ 
+#----------------- Compiler and Linker Options --------------------------------
+ 
+
+CC_OPTS =  COPTIMFLAGS="-O2" 
+CPP_REQ_DEFINES = -DMATLAB_MEX_FILE
+ 
+# Uncomment this line to move warning level to W4
+# cflags = $(cflags:W3=W4)
+CFLAGS = $(CC_OPTS) $(CPP_REQ_DEFINES) $(INCLUDE_PATH)
+ 
+LDFLAGS = -Wl,-rpath,@loader_path  
+ 
+AUXLDFLAGS = 
+#----------------------------- Source Files -----------------------------------
+ 
+USER_ABS_OBJS =
+
+AUX_SRCS =   
+
+REQ_SRCS  = $(MODEL_SRC) $(MODEL_REG) $(MODULE_SRCS) $(AUX_SRCS) 
+
+REQ_OBJS = $(REQ_SRCS:.cpp=.o)
+REQ_OBJS2 = $(REQ_OBJS:.c=.o)
+OBJS = $(REQ_OBJS2) $(USER_ABS_OBJS) $(AUX_ABS_OBJS)
+OBJLIST_FILE = lab5_2_cgxe.mol
+TMWLIB = -L/Applications/MATLAB_R2017a.app/bin/maci64 -lfixedpoint -L/Applications/MATLAB_R2017a.app/bin/maci64 -lut -L/Applications/MATLAB_R2017a.app/bin/maci64 -lemlrt -L/Applications/MATLAB_R2017a.app/bin/maci64 -lmwslexec_simbridge -L/Applications/MATLAB_R2017a.app/bin/maci64 -lmwcgxert -L/Applications/MATLAB_R2017a.app/bin/maci64 -lmwmathutil -L/Applications/MATLAB_R2017a.app/bin/maci64 -lmwipp -L/Applications/MATLAB_R2017a.app/bin/maci64 -lcovrt 
+PARLIB = 
+  MAPCSF = /Applications/MATLAB_R2017a.app/tools/maci64/mapcsf
+   # RUN_MAPCSF_ON_UNIX is defined only if MAPCSF exists on this platform.
+   ifneq ($(wildcard $(MAPCSF)),) # run MAPCSF if it exists on this platform
+      RUN_MAPCSF_ON_UNIX =  /Applications/MATLAB_R2017a.app/tools/maci64/mapcsf $@
+   endif
+ 
+THIRD_PARTY_LIBS = 
+
+#--------------------------------- Rules --------------------------------------
+ 
+MEX_FILE_NAME = $(MODEL)_$(TARGET).mexmaci64
+ 
+$(MEX_FILE_NAME): $(MAKEFILE) $(OBJS) $(MEXLIB)
+	@echo ### Linking ...
+	$(CC) -silent LDFLAGS="\$$LDFLAGS $(LDFLAGS) $(AUXLDFLAGS)" -output $(MEX_FILE_NAME) @$(OBJLIST_FILE) $(OBJS) $(TMWLIB) $(PARLIB) $(THIRD_PARTY_LIBS) 
+	$(RUN_MAPCSF_ON_UNIX)
+
+%.o :	%.c
+	$(CC) -c $(CFLAGS) $<
+
+%.o :	%.cpp
+	$(CC) -c $(CFLAGS) $<
+

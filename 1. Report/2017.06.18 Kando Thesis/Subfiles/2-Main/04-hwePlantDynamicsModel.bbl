@@ -1,0 +1,170 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{none/global/}
+    \entry{REF:online:2009-yamamoto}{online}{}
+      \name{author}{1}{}{%
+        {{hash=c50360c71d896d22ac04a49216b3a796}{%
+           family={Yamamoto},
+           familyi={Y\bibinitperiod},
+           given={Yorihisa},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{c50360c71d896d22ac04a49216b3a796}
+      \strng{fullhash}{c50360c71d896d22ac04a49216b3a796}
+      \strng{authornamehash}{c50360c71d896d22ac04a49216b3a796}
+      \strng{authorfullhash}{c50360c71d896d22ac04a49216b3a796}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{month}{5}
+      \field{title}{NXTway-GS (Self-Balancing Two-Wheeled Robot) Controller Design}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.mathworks.com/matlabcentral/fileexchange/19147-nxtway-gs--self-balancing-two-wheeled-robot--controller-design
+      \endverb
+    \endentry
+    \entry{REF:thesis:masters:2012-peltier}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=d3422c1c1a91f581d6ec819e0447c512}{%
+           family={Peltier},
+           familyi={P\bibinitperiod},
+           given={Michael\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Rhode Island (URI): Department of Electrical Engineering}%
+      }
+      \strng{namehash}{d3422c1c1a91f581d6ec819e0447c512}
+      \strng{fullhash}{d3422c1c1a91f581d6ec819e0447c512}
+      \strng{authornamehash}{d3422c1c1a91f581d6ec819e0447c512}
+      \strng{authorfullhash}{d3422c1c1a91f581d6ec819e0447c512}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{1}
+      \field{title}{Trajectory Control of a Two-Wheeled Robot}
+      \field{type}{mathesis}
+      \field{year}{2012}
+      \field{dateera}{ce}
+    \endentry
+    \entry{REF:conference:2015-howard}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=79bbf80a5d4322bcb68a6ea9fae1317b}{%
+           family={Howard},
+           familyi={H\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=0b8df5cb8925b38e4b46e5867a920c00}{%
+           family={Bushnell},
+           familyi={B\bibinitperiod},
+           given={Linda},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hangzhou, China}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{a8bd1d69da4797fd3e64abb37156f78c}
+      \strng{fullhash}{a8bd1d69da4797fd3e64abb37156f78c}
+      \strng{authornamehash}{a8bd1d69da4797fd3e64abb37156f78c}
+      \strng{authorfullhash}{a8bd1d69da4797fd3e64abb37156f78c}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 International Conference on Computer Science and Mechanical Automation (CSMA)}
+      \field{month}{10}
+      \field{title}{Enhancing Linear System Theory Curriculum with an Inverted Pendulum Robot}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1109/CSMA.2015.63
+      \endverb
+    \endentry
+    \entry{REF:online:philohome}{online}{}
+      \name{author}{1}{}{%
+        {{hash=67b6e6ee64c030ddf6c174d41b0672ed}{%
+           family={{"Philo" Hurbain}},
+           familyi={"\bibinitperiod},
+           given={Philippe},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{67b6e6ee64c030ddf6c174d41b0672ed}
+      \strng{fullhash}{67b6e6ee64c030ddf6c174d41b0672ed}
+      \strng{authornamehash}{67b6e6ee64c030ddf6c174d41b0672ed}
+      \strng{authorfullhash}{67b6e6ee64c030ddf6c174d41b0672ed}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{15}
+      \field{month}{5}
+      \field{title}{NXT Motor Internals}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.philohome.com/nxtmotor/nxtmotor.htm
+      \endverb
+    \endentry
+    \entry{REF:textbook:1995-vaccaro}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ef1a20e284278af5b4c0417fe78a0b58}{%
+           family={Vaccaro},
+           familyi={V\bibinitperiod},
+           given={Richard\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Mcgraw-Hill College}%
+      }
+      \strng{namehash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \strng{fullhash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \strng{authornamehash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \strng{authorfullhash}{ef1a20e284278af5b4c0417fe78a0b58}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0070667815}
+      \field{month}{1}
+      \field{series}{Mcgraw Hill Series in Electrical and Computer Engineering}
+      \field{title}{Digital Control: A State-space Approach}
+      \field{year}{1995}
+      \field{dateera}{ce}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
