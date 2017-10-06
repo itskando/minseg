@@ -1,5 +1,5 @@
 %% [Init   ]: Plant: User-defined                                          
-plant.dynamics.mode     = ui.plant.dynamics.mode;
+plant.dynamics.mode         = ui.plant.dynamics.mode;
 
 %% [Init   ]: Plant: Variants                                              
 plant.hardware.         var = Simulink.Variant( 'plant_dynamics_mode == 0' );
@@ -15,9 +15,11 @@ end
 
 %% [Init   ]: Plant: Power supply                                          
 
+
 plant.pSupply.battery.v.nominal = 1.50; % [V]
 plant.pSupply.battery.n         = 6;    % [-] [range: 0 - 6]
-plant.pSupply.battery.v.actual  = 7.36; % [V] [check frequently]
+plant.pSupply.battery.v.actual  = 8.00; % [V] [check frequently]
+
 
 plant.pSupply.usb.v.nominal     = 4.50; % [V]
 plant.pSupply.usb.v.actual      = plant.pSupply.usb.v.nominal              ...
@@ -30,7 +32,7 @@ plant.pSupply.mode = 0; % [default: 0]
 switch plant.pSupply.mode
 
 case 0 % battery power
-plant.pSupply.v = plant.pSupply.battery.v.actual % [V]
+plant.pSupply.v = plant.pSupply.battery.v.actual; % [V]
 
 assert( plant.pSupply.battery.n == 6,                                      ... 
       ['Battery power is enabled (plant.pSupply.mode == 0);\n'             ...

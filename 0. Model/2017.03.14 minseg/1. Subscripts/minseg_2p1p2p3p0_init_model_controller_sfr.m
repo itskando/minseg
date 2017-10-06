@@ -93,12 +93,12 @@ case 2 % plant only
 switch 0
 case 0
 ctrl.motorDriver_v.sfr.lqr.q                                               ...
- =  [ .01 ... plant: theta
-      600 ... plant: phi.x
-      .01 ... plant: theta.dot
-      .01 ... plant: phi.x.dot
-      .01 ... plant: phi.y
-      .01 ... plant: phi.y.dot
+ =  [ 100 ... plant: theta
+      100 ... plant: phi.x
+      100 ... plant: theta.dot
+      100 ... plant: phi.x.dot
+      100 ... plant: phi.y
+      100 ... plant: phi.y.dot
     ];
   
 case 1
