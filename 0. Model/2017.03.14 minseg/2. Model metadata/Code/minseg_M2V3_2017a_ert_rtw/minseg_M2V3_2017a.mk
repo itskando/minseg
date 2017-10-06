@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'minseg_M2V3_2017a'. 
 ## 
 ## Makefile     : minseg_M2V3_2017a.mk
-## Generated on : Tue Aug 22 20:50:17 2017
+## Generated on : Thu Oct 05 21:51:00 2017
 ## MATLAB Coder version: 3.3 (R2017a)
 ## 
 ## Build Info:
@@ -29,7 +29,7 @@ MATLAB_ROOT               = /Applications/MATLAB_R2017a.app
 MATLAB_BIN                = /Applications/MATLAB_R2017a.app/bin
 MATLAB_ARCH_BIN           = /Applications/MATLAB_R2017a.app/bin/maci64
 MASTER_ANCHOR_DIR         = 
-START_DIR                 = /Users/kando/Google\ Drive/thesis/0.\ Model/2017.03.14\ minseg/2.\ Model\ metadata/Code
+START_DIR                 = /Users/kando/Development/git/minseg/0.\ Model/2017.03.14\ minseg/2.\ Model\ metadata/Code
 ARCH                      = maci64
 SOLVER                    = 
 SOLVER_OBJ                = 
@@ -225,7 +225,7 @@ BUILD_TYPE = "Top-Level Standalone Executable"
 ## INCLUDE PATHS
 ###########################################################################
 
-INCLUDES_BUILDINFO = -I$(START_DIR) -I/Users/kando/Documents/MATLAB/SupportPackages/R2017a/3P.instrset/arduinoide.instrset/Arduino.app/Contents/Java/hardware/arduino/avr/libraries/Wire -I/Users/kando/Documents/MATLAB/SupportPackages/R2017a/3P.instrset/arduinoide.instrset/Arduino.app/Contents/Java/hardware/arduino/avr/libraries/Wire/utility -I/Users/kando/Documents/MATLAB/RASPlib_2017_05_02/RASPlib/include -I/Users/kando/Documents/MATLAB/SupportPackages/R2017a/3P.instrset/arduinoide.instrset/Arduino.app/Contents/Java/hardware/arduino/avr/libraries/Wire/src -I/Users/kando/Documents/MATLAB/SupportPackages/R2017a/3P.instrset/arduinoide.instrset/Arduino.app/Contents/Java/hardware/arduino/avr/libraries/Wire/src/utility -I/Users/kando/Documents/MATLAB/RASPlib_2017_05_02/RASPlib/src -I/Users/kando/Documents/MATLAB/SupportPackages/R2017a/toolbox/target/supportpackages/arduinobase/include -I/Users/kando/Documents/MATLAB/SupportPackages/R2017a/toolbox/target/supportpackages/arduinobase/blocks/sfcn/include -I$(START_DIR)/minseg_M2V3_2017a_ert_rtw -I/Users/kando/Google\ Drive/thesis/0.\ Model/2017.03.14\ minseg -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/dsp/include -I$(MATLAB_ROOT)/toolbox/dsp/extern/src/export/include/src -I$(MATLAB_ROOT)/toolbox/dsp/extern/src/export/include -I$(MATLAB_ROOT)/toolbox/shared/dsp/vision/matlab/include -I$(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino -I$(ARDUINO_ROOT)/hardware/arduino/avr/variants/mega -I/Users/kando/Documents/MATLAB/SupportPackages/R2017a/toolbox/target/supportpackages/arduinotarget/include -I/Users/kando/Documents/MATLAB/SupportPackages/R2017a/toolbox/target/supportpackages/arduinotarget/scheduler/include -I$(ARDUINO_ROOT)/hardware/tools/avr/avr/include/avr -I/Users/kando/Documents/MATLAB/SupportPackages/R2017a/toolbox/target/shared/externalmode_daemon/include
+INCLUDES_BUILDINFO = -I$(START_DIR) -I/Users/kando/Documents/MATLAB/SupportPackages/R2017a/3P.instrset/arduinoide.instrset/Arduino.app/Contents/Java/hardware/arduino/avr/libraries/Wire -I/Users/kando/Documents/MATLAB/SupportPackages/R2017a/3P.instrset/arduinoide.instrset/Arduino.app/Contents/Java/hardware/arduino/avr/libraries/Wire/utility -I/Users/kando/Documents/MATLAB/RASPlib_2017_05_02/RASPlib/include -I/Users/kando/Documents/MATLAB/SupportPackages/R2017a/3P.instrset/arduinoide.instrset/Arduino.app/Contents/Java/hardware/arduino/avr/libraries/Wire/src -I/Users/kando/Documents/MATLAB/SupportPackages/R2017a/3P.instrset/arduinoide.instrset/Arduino.app/Contents/Java/hardware/arduino/avr/libraries/Wire/src/utility -I/Users/kando/Documents/MATLAB/RASPlib_2017_05_02/RASPlib/src -I/Users/kando/Documents/MATLAB/SupportPackages/R2017a/toolbox/target/supportpackages/arduinobase/include -I/Users/kando/Documents/MATLAB/SupportPackages/R2017a/toolbox/target/supportpackages/arduinobase/blocks/sfcn/include -I$(START_DIR)/minseg_M2V3_2017a_ert_rtw -I/Users/kando/Development/git/minseg/0.\ Model/2017.03.14\ minseg -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/dsp/include -I$(MATLAB_ROOT)/toolbox/dsp/extern/src/export/include/src -I$(MATLAB_ROOT)/toolbox/dsp/extern/src/export/include -I$(MATLAB_ROOT)/toolbox/shared/dsp/vision/matlab/include -I$(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino -I$(ARDUINO_ROOT)/hardware/arduino/avr/variants/mega -I/Users/kando/Documents/MATLAB/SupportPackages/R2017a/toolbox/target/supportpackages/arduinotarget/include -I/Users/kando/Documents/MATLAB/SupportPackages/R2017a/toolbox/target/supportpackages/arduinotarget/scheduler/include -I$(ARDUINO_ROOT)/hardware/tools/avr/avr/include/avr -I/Users/kando/Documents/MATLAB/SupportPackages/R2017a/toolbox/target/shared/externalmode_daemon/include
 
 INCLUDES = $(INCLUDES_BUILDINFO)
 

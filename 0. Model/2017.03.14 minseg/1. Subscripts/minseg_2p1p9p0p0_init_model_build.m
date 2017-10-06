@@ -51,10 +51,12 @@ case 0 % hardware
 mdl.parameter.label = [...
 mdl.parameter.label
 { 
-  'plant.mtr.driver.left.pin.pos'
-  'plant.mtr.driver.left.pin.neg'
-  'plant.mtr.driver.middle.pin.pos'
-  'plant.mtr.driver.middle.pin.neg'
+  'plant.motorDriver.left.pin.pos'
+  'plant.motorDriver.left.pin.neg'
+  'plant.motorDriver.middle.pin.pos'
+  'plant.motorDriver.middle.pin.neg'
+  
+  'plant.mtr.supply.v'
 
   'plant.mtr.encoder.left.pin.A'
   'plant.mtr.encoder.left.pin.B'

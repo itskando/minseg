@@ -50,8 +50,9 @@ end
 %% [Init   ]: Plant: General                                               
 
 minseg_2p1p1p1p1_init_model_plant_general_wheelBody
-minseg_2p1p1p1p2_init_model_plant_general_motor
-minseg_2p1p1p1p3_init_model_plant_general_motorGearboxEncoder
+minseg_2p1p1p1p2_init_model_plant_general_motorDriver
+minseg_2p1p1p1p3_init_model_plant_general_motor
+minseg_2p1p1p1p4_init_model_plant_general_motorGearboxEncoder
 
 %% [Init   ]: Plant: Initial Condition                                     
 

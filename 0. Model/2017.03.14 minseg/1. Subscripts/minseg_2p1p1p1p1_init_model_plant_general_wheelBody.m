@@ -31,17 +31,19 @@ plant.wheel.J        = 7.460e-6;  %  moment of inertia        [kg / m^2] [source
 %                      +  plant.bluetooth.m  * plant.x.bluetoothModule; 
 %                               %  mass   [kg]
 
-plant.body.m         =  1.030 * k.lb2kg; %                    [kg]
+plant.body.m         =  1.030 * k.lb2kg - plant.wheel.m * 2; % [kg]
                                          % net measurement taken to reduce rounding errors.
                                          % [taken with 6 batteries].
 
 %% [Init   ]: Plant: Body                                                  
 % note: does not include wheels.
 
+% tape measure
 plant.body.l.h       =  8.00 * k.in2m; %  height [m]
 plant.body.l.w       =  3.25 * k.in2m; %  width  [m]
 plant.body.l.d       =  2.50 * k.in2m; %  depth  [m]
 
+% calipers
 plant.body.l.h       =  0.2032;        %  height [m]
 plant.body.l.w       =  0.0634500;     %  width  [m]
 plant.body.l.d       =  0.0525825;     %  depth  [m]

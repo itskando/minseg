@@ -3,10 +3,10 @@ minseg_0p0p0p0p0_global
 
 %% [Input  ]: Script: Commands                                             
 
-ui.x.build   = 0; % rebuild required after any changes to scripts.
+ui.x.build   = 1; % rebuild required after any changes to scripts.
 ui.x.write   = 0; % not implemented
 ui.x.read    = 0;
-ui.x.plot    = 1; % enables read/write by default.
+ui.x.plot    = 0; % enables read/write by default.
 
 ui.x.save    = 0;
 ui.x.cleanup = 0;
@@ -36,7 +36,7 @@ ui.plant.dynamics.mode        = 0; % [default: 0 or 2]
 
 %% [Input  ]: Model: Controller: motor.v                                   
 
-ui.ctrl.motorDriver_v.mode    = 2; % [default: 3]
+ui.ctrl.motorDriver_v.mode    = 3; % [default: 3]
 % #: mode:          input command:   [input command unit]:
 % 0: feedForward    v.motor          [V]
 % 1: PID            w.motor          [rad/s]

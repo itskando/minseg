@@ -97,8 +97,8 @@ ctrl.motorDriver_v.sfr.lqr.q                                               ...
       100 ... plant: phi.x
       100 ... plant: theta.dot
       100 ... plant: phi.x.dot
-      100 ... plant: phi.y
-      100 ... plant: phi.y.dot
+        1 ... plant: phi.y
+        1 ... plant: phi.y.dot
     ];
   
 case 1
@@ -116,6 +116,20 @@ ctrl.motorDriver_v.sfr.lqr.r = 1;
 
 case 3 % plant plus rts
 
+switch 0
+case 0
+ctrl.motorDriver_v.sfr.lqr.q                                               ...
+ =  [ 100 ... plant: theta
+      100 ... plant: phi.x
+      100 ... plant: theta.dot
+      100 ... plant: phi.x.dot
+       01 ... plant: phi.y
+       01 ... plant: phi.y.dot
+      400 ...   rts: theta
+      200 ...   rts: phi.y
+    ];
+  
+case 1
 ctrl.motorDriver_v.sfr.lqr.q                                               ...
  =  [  05 ... plant: theta
        01 ... plant: phi.x
@@ -127,6 +141,8 @@ ctrl.motorDriver_v.sfr.lqr.q                                               ...
        10 ...   rts: phi.y
     ];
   
+end
+
 ctrl.motorDriver_v.sfr.lqr.r = 1;
   
 end

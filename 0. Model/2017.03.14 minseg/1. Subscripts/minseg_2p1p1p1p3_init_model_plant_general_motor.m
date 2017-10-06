@@ -17,6 +17,12 @@ plant.mtr.k.torque         =  0.470; %  torque   constant     [N*m / A   ]
 
 end
 
+
+%% [Init   ]: Plant: Motor: Supply voltage (maximum possible)              
+
+plant.mtr.supply.v         = plant.pSupply.v - plant.motorDriver.v;
+                                     %  supply voltage (max)  [V         ]
+
 %% [Init   ]: Plant: Motor: Transfer function                              
 
 % transfer function = output/input = angularVelocity/v.input
@@ -31,8 +37,9 @@ end
 
 %% [Init   ]: Plant: Motor: Coefficient of friction                              
 
-plant.mtr.k.friction =  plant.mtr.k.torque * (1 - plant.mtr.k.dlambda * plant.mtr.k.v2w) ...
-                     / (plant.mtr.R * plant.mtr.k.v2w); 
+plant.mtr.k.friction =  plant.mtr.k.torque                                 ...
+                     * (1 - plant.mtr.k.dlambda * plant.mtr.k.v2w)         ...
+                     / (    plant.mtr.R         * plant.mtr.k.v2w); 
                                       % friction coefficient [ - ]
 
 %% End
