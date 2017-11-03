@@ -125,8 +125,8 @@ ctrl.motorDriver_v.sfr.lqr.q                                               ...
       100 ... plant: phi.x.dot
        01 ... plant: phi.y
        01 ... plant: phi.y.dot
-      400 ...   rts: theta
-      200 ...   rts: phi.y
+      0.1 ...   rts: theta
+      0.1 ...   rts: phi.y
     ];
   
 case 1
