@@ -1,0 +1,161 @@
+\documentclass{scrreprt}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{alignat}{11}
+\newcommand*\centermathcell[1]{\omit\hfil$\displaystyle#1$\hfil\ignorespaces}
+%\begin{array}{7}
+%\centermathcell{
+K_{\ddot{\phi}}
+%}
+& \cdot 
+\begin{bmatrix}
+\ddot{\phi}_{x}\\
+\ddot{\phi}_{y}\\
+\end{bmatrix}
+& + &
+\begin{bmatrix}
+K_{\dot{\phi}} 
+\end{bmatrix}
+& \cdot 
+\begin{bmatrix}
+\dot{\phi}_{x}\\
+\dot{\phi}_{y}\\
+\end{bmatrix}
+& + &
+K_{\phi}
+& \cdot 
+\begin{bmatrix}
+\phi_{x}\\
+\phi_{y}\\
+\end{bmatrix}
+& = &
+K_{v}
+& \cdot
+\begin{bmatrix}
+v_{mtr.l}\\
+v_{mtr.r}\\
+\end{bmatrix}
+%%
+\\[+2em]
+%%
+I
+& \cdot
+\begin{bmatrix}
+\ddot{\phi}_{x}\\
+\ddot{\phi}_{y}\\
+\end{bmatrix}
+& = &
+-K_{\ddot{\phi}}^{-1}
+\cdot 
+K_{\dot{\phi}} 
+& \cdot 
+\begin{bmatrix}
+\dot{\phi}_{x}\\
+\dot{\phi}_{y}\\
+\end{bmatrix}
+& + &
+-K_{\ddot{\phi}}^{-1}
+\cdot 
+K_{\phi}
+& \cdot 
+\begin{bmatrix}
+\phi_{x}\\
+\phi_{y}\\
+\end{bmatrix}
+& + &
+K_{\ddot{\phi}}^{-1}
+\cdot 
+K_{v}
+& \cdot
+\begin{bmatrix}
+v_{mtr.l}\\
+v_{mtr.r}\\
+\end{bmatrix}
+%\end{array}
+%%
+\end{alignat}
+
+
+
+
+\vspace{+4em}
+
+
+
+
+\begin{gather}
+\begin{array}{ccccccccccc}
+\begin{bmatrix}
+K_{\ddot{\phi}}
+\end{bmatrix}
+& \cdot 
+\begin{bmatrix}
+\ddot{\phi}_{x}\\
+\ddot{\phi}_{y}\\
+\end{bmatrix}
+& + &
+\begin{gathered}
+K_{\dot{\phi}}
+\end{gathered}
+& \cdot 
+\begin{bmatrix}
+\dot{\phi}_{x}\\
+\dot{\phi}_{y}\\
+\end{bmatrix}
+& + &
+K_{\phi}
+& \cdot 
+\begin{bmatrix}
+\phi_{x}\\
+\phi_{y}\\
+\end{bmatrix}
+& = &
+K_{v}
+& \cdot
+\begin{bmatrix}
+v_{mtr.l}\\
+v_{mtr.r}\\
+\end{bmatrix}
+%%
+\\[+2em]
+%%
+I
+& \cdot
+\begin{bmatrix}
+\ddot{\phi}_{x}\\
+\ddot{\phi}_{y}\\
+\end{bmatrix}
+& = &
+-K_{\ddot{\phi}}^{-1}
+\cdot 
+K_{\dot{\phi}} 
+& \cdot 
+\begin{bmatrix}
+\dot{\phi}_{x}\\
+\dot{\phi}_{y}\\
+\end{bmatrix}
+& + &
+-K_{\ddot{\phi}}^{-1}
+\cdot 
+K_{\phi}
+& \cdot 
+\begin{bmatrix}
+\phi_{x}\\
+\phi_{y}\\
+\end{bmatrix}
+& + &
+K_{\ddot{\phi}}^{-1}
+\cdot 
+K_{v}
+& \cdot
+\begin{bmatrix}
+v_{mtr.l}\\
+v_{mtr.r}\\
+\end{bmatrix}
+\end{array}
+%%
+\end{gather}
+
+\end{document}

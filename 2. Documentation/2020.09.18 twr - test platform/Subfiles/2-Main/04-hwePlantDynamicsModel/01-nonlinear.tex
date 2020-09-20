@@ -1,0 +1,221 @@
+% !TEX spellcheck = English (United States) (Aspell)
+% !TEX TS-program = arara
+%  arara: lmkclean
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: biber
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: pdflatex: { synctex: yes, options: '-file-line-error -halt-on-error' }
+%  arara: lmkclean
+\documentclass[crop=false,float=true,class=scrreprt]{standalone}
+
+\providecommand{\main}{../../..}
+\input{\main/Subfiles/0-Preamble/0-Preamble.tex}  % Preamble [document configuration]
+
+\begin{document}
+
+\section{Nonlinear model}
+\label{SEC:hwePlantDynamicsModel:nonlinear}
+
+The dynamic motion equations of the two-wheeled robot are derived using the Lagrangian method.
+The equations are based on the coordinate system provided in Figure~%
+\ref{FIG:hwePlantDynamicsModel:multiview}.
+
+\subsection{Coordinate System}
+\label{SEC:hwePlantDynamicsModel:nonlinear:coordinateSystem}
+
+The coordinate system is explicitly defined in Equations
+\eqref{SEC:hwePlantDynamicsModel:nonlinear:coordinateSystem:begin}~%
+-~%
+\eqref{SEC:hwePlantDynamicsModel:nonlinear:coordinateSystem:initialConditions}.
+
+
+\vspace*{-2em}
+
+
+\begin{align}
+\label{SEC:hwePlantDynamicsModel:nonlinear:coordinateSystem:begin}
+\begin{bmatrix}
+\hphantom{\theta_{g.av}}\\[-2em]
+\theta_{g.l}  \\
+\theta_{g.r}  \\
+\theta_{g.av} \\
+\phi_{y}      \\
+\end{bmatrix}
+& =
+\begin{bmatrix}
+\begin{array}{ccccc}
+                      &       &   \theta_{b.l} & + & \phi_{x}       \\
+                      &       &   \theta_{b.r} & + & \phi_{x}       \\
+\frac{1}{2}           & \cdot & ( \theta_{g.l} & + & \theta_{g.r} ) \\
+\frac{r_{w}}{l_{b.w}} & \cdot & ( \theta_{g.r} & - & \theta_{g.l} ) \\
+\end{array}
+\end{bmatrix}
+%%
+\\[+1em]
+%%
+\begin{bmatrix}
+\hphantom{\theta_{g.av}}\\[-2em]
+\dot{p}_{w.x} \\
+\dot{p}_{w.y} \\
+\dot{p}_{w.z} \\
+\end{bmatrix}
+& =
+\begin{bmatrix}
+r_{w} \cdot \dot{\theta}_{g.av} \cdot \mathrm{cos}(\phi_{y}) \\
+r_{w} \cdot \dot{\theta}_{g.av} \cdot \mathrm{sin}(\phi_{y}) \\
+0                                                            \\
+\end{bmatrix}
+%%
+\\[+1em]
+%%
+\begin{bmatrix}
+\hphantom{\theta_{g.av}}\\[-2em]
+p_{w.x} \\
+p_{w.y} \\
+p_{w.z} \\
+\end{bmatrix}
+& =
+\begin{bmatrix}
+\displaystyle\int \dot{p}_{w.x} \cdot \mathrm{d}t & + & p_{w.x}( 0 ) \\
+\displaystyle\int \dot{p}_{w.y} \cdot \mathrm{d}t & + & p_{w.y}( 0 ) \\
+\displaystyle\int \dot{p}_{w.z} \cdot \mathrm{d}t & + & p_{w.z}( 0 ) \\
+\end{bmatrix}
+%%
+\\[+1em]
+%%
+\begin{bmatrix}
+\hphantom{\theta_{g.av}}\\[-2em]
+p_{wl.x} \\
+p_{wl.y} \\
+p_{wl.z} \\
+\end{bmatrix}
+& =
+\begin{bmatrix}
+\begin{array}{ccc}
+          p_{w.x} & - & \frac{l_{b.w}}{2} \cdot \mathrm{sin}( \phi_{y})  \\
+          p_{w.x} & + & \frac{l_{b.w}}{2} \cdot \mathrm{cos}( \phi_{y})  \\
+\mc{3}{c}{p_{w.z}                                                       }\\
+\end{array}
+\end{bmatrix}
+%%
+&
+%%
+\begin{bmatrix}
+\hphantom{\theta_{g.av}}\\[-2em]
+p_{wr.x} \\
+p_{wr.y} \\
+p_{wr.z} \\
+\end{bmatrix}
+& =
+\begin{bmatrix}
+\begin{array}{ccc}
+          p_{w.x} & + & \frac{l_{b.w}}{2} \cdot \mathrm{sin}( \phi_{y})  \\
+          p_{w.x} & - & \frac{l_{b.w}}{2} \cdot \mathrm{cos}( \phi_{y})  \\
+\mc{3}{c}{p_{w.z}                                                       }\\
+\end{array}
+\end{bmatrix}
+%%
+\\[+1em]
+%%
+\label{SEC:hwePlantDynamicsModel:nonlinear:coordinateSystem:end}
+\begin{bmatrix}
+\hphantom{\theta_{g.av}}\\[-2em]
+p_{b.x} \\
+p_{b.y} \\
+p_{b.z} \\
+\end{bmatrix}
+& =
+\begin{bmatrix}
+p_{w.x} & + & l_{b.c2a} \cdot \mathrm{sin}( \phi_{x}) \cdot \mathrm{cos}( \phi_{y}) \\
+p_{w.y} & + & l_{b.c2a} \cdot \mathrm{sin}( \phi_{x}) \cdot \mathrm{sin}( \phi_{y}) \\
+p_{w.z} & + & l_{b.c2a} \cdot \mathrm{cos}( \phi_{x})                               \\
+\end{bmatrix}
+%%
+\end{align}
+
+
+
+
+\clearpage
+
+
+
+
+Typically, initial conditions are assumed to be as follows:
+
+
+\vspace{-2em}
+
+
+\begin{align}
+\label{SEC:hwePlantDynamicsModel:nonlinear:coordinateSystem:initialConditions}
+\begin{bmatrix}
+p_{w.x}(0) \\
+p_{w.y}(0) \\
+p_{w.z}(0) \\
+\end{bmatrix}
+& =
+\begin{bmatrix}
+0     \\
+0     \\
+r_{w} \\
+\end{bmatrix}
+\end{align}
+
+
+
+
+\iffalse
+\begin{align}
+\label{EQN::hwePlantDynamicsModel:nonlinear}
+%
+\begin{array}{ccc}
+F_{\theta}   & = & (2 \cdot m_{wheel} + m_{body}) \cdot r_{wheel}^{2}
+               +    2 \cdot J_{wheel}
+               +    2 \cdot k_{revMotor2revWheel}                                 \\
+             & + &  \\
+             & + &  \\
+F_{\phi_{x}} & = & a \\
+             & + & b \\
+             & + & c \\
+F_{\phi_{y}} & = & a \\
+             & + & b \\
+             & + & c \\
+\end{array}
+%
+\\[-0em]
+%
+F_{\theta}
+=&
+\begin{matrix}
+a
+\end{matrix}
+%
+\end{align}
+
+The motion equations of the two-wheeled inverted pendulum can be derived by using the Lagrangian method.
+This based on the coordinate system in Figure 3-2. If the direction of two-wheeled inverted pendulum is x-axis positive direction at t=0,eachcoordinatesaregivenasthefollowing.
+
+\subsection{Wheel}
+\subsection{Body}
+\subsection{Robot}
+
+\fi
+
+
+\clearpage
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

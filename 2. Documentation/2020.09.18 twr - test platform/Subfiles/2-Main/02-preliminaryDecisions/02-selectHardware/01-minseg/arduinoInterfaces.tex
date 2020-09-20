@@ -1,0 +1,75 @@
+% !TEX spellcheck = English (United States) (Aspell)
+% !TEX TS-program = arara
+%  arara: lmkclean
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: biber
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: pdflatex: { synctex: yes, options: '-file-line-error -halt-on-error' }
+%  arara: lmkclean
+\documentclass[crop=false,float=true,class=scrreprt]{standalone}
+
+\providecommand{\main}{../../../../..}
+\input{\main/Subfiles/0-Preamble/0-Preamble.tex}  % Preamble [document configuration]
+
+\begin{document}
+
+
+\iffalse
+
+\subsubsection{Arduino Interfaces}
+\label{SEC:preliminaryDecisions:selectionHardwareSoftware:hardware:components:interfaces}
+
+board sample rate\\
+board run time (inf)\\
+
+serial to/from board\\
+maximize serial speed\\
+
+
+Due to the inclusion of a USB port, interfacing with the board is relatively convenient,
+whether for programming the board 
+or for data transmission during operation.
+Additionally, due to the inclusion of multiple UARTs, 
+the board can be configured 
+
+
+-power (see previous section)
+-communication: serial (usb or bluetooth)
+-wired or wireless
+
+
+
+This can be beneficial when the USB connection is already being used to perform communication;
+for example, during microcontroller programming 
+or during operation for wired data transmission..
+
+During microcontroller programming, this is especially ideal 
+since the location and, particularly, the attitude of the robot is not significant.
+
+Contrarily, during operation,
+the robot will need to consistently balance at or near an upright position.
+While the mass from the cable may be relatively insignificant,
+tension in the cable could induce significant disturbance forces on the robot
+during trajectory.
+These disturbances are beyond the scope of the planned studies,
+and therefore will be avoided during testing.
+
+\fi
+
+
+\clearpage
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

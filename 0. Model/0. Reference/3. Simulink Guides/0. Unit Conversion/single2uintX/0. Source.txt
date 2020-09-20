@@ -1,1 +1,0 @@
-https://www.mathworks.com/matlabcentral/fileexchange/48575-single-precision-to-uint8-and-uint32-conversion--and-back-

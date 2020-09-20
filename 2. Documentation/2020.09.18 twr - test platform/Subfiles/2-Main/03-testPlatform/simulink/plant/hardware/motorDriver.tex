@@ -1,0 +1,144 @@
+% !TEX TS-program = arara
+%  arara: lmkclean
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: biber
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: pdflatex: { synctex: yes, options: '-file-line-error -halt-on-error' }
+%  arara: lmkclean
+\documentclass[crop=false,float=true,class=scrreprt]{standalone}
+
+\providecommand{\main}{../../../../../..}
+\input{\main/Subfiles/0-Preamble/0-Preamble.tex}  % Preamble [document configuration]
+
+\begin{document}
+
+
+
+
+\subsubsubsection{Motor Driver}
+\label{SEC:testPlatform:simulink:plant:hardware:motorDriver}
+
+The \tif{Gyroscope} subsystem is depicted in Figure~%
+\ref{FIG:testPlatform:simulink:plant:hardware:gyroscope}.
+
+It reads raw data from the gyroscope driver for each of three-dimensional axes
+{\fns[\tif{x, y, z}]}.
+For each axis, sensor bias is first removed.
+Then, the data is reformatted into SI units representing angular velocity $\omega$.
+This is performed in the \tif{Data Conversion} subsystem,
+which is depicted in Figure~%
+\ref{FIG:testPlatform:simulink:plant:hardware:gyroscope:dataConversion}.
+A discrete low-pass bessel filter is used to reduce sensor noise.
+{\fns[\tif{The effect of this is untested.}]}
+
+An integrator is used to also determine angular position $\theta$.
+
+
+
+
+\subsubsubsection{Bias}
+\label{SEC:testPlatform:simulink:plant:hardware:gyroscope:bias}
+
+The gyroscope sensor reading inherently has bias.
+This bias causes inaccurate angular velocity $\omega$ readings.
+More importantly, since angular position $\theta$ is determined 
+via the integration of angular velocity $\omega$,
+the bias causes the angular position $\theta$ calculation to incorrectly increment
+after each time interval.
+This ultimately causes the angular position $\theta$ measurement
+to continually diverge.
+
+Since the controller relies on the observance of the angular position,
+this inaccuracy must be mitigated as much as possible.
+
+
+
+
+\vspace*{\fill}
+\begin{figure}[H]%
+\centering%
+\fbox{%
+\includegraphics[trim = 0em 0em 0em 0em, clip, width=0.975\textwidth]{snap-Motor-Drivers.pdf}%
+}%
+\caption[{[minseg\_M2V3\_2017a:Plant:Hardware]: Gyroscope/Data Conversion}]%
+        {{[minseg\_M2V3\_2017a:Plant:Hardware]: Gyroscope/Data Conversion%
+          \label{SEC:testPlatform:simulink:plant:hardware:gyroscope:dataConversion}%
+        }}%
+\end{figure}
+\vspace*{\fill}
+
+
+
+
+\clearpage
+
+
+
+
+\begin{landscape}
+%\vspace*{\fill}
+\begin{figure}[H]%
+\centering%
+%\fbox{%
+\begin{minipage}[c][0.995\textheight][c]{0.995\linewidth}%
+\centering%
+\fbox{%
+\includegraphics[trim = 0em 0em 0em 0em, clip, width=0.975\textwidth]{snap-Motor-Drivers}%
+}%
+\caption[{[minseg\_M2V3\_2017a:Plant:Hardware]: Gyroscope}]%
+        {{[minseg\_M2V3\_2017a:Plant:Hardware]: Gyroscope%
+          \label{FIG:testPlatform:simulink:plant:hardware:gyroscope}%
+        }}%
+\end{minipage}%
+%}%
+\end{figure}
+%\vspace*{\fill}
+\end{landscape}
+
+
+
+
+\clearpage
+
+
+
+
+\begin{landscape}
+%\vspace*{\fill}
+\begin{figure}[H]%
+\centering%
+%\fbox{%
+\begin{minipage}[c][0.995\textheight][c]{0.995\linewidth}%
+\centering%
+\fbox{%
+\includegraphics[trim = 0em 0em 0em 0em, clip, width=0.975\textwidth]{snap-Left-Connected}%
+}%
+\caption[{[minseg\_M2V3\_2017a:Plant:Hardware]: Gyroscope}]%
+        {{[minseg\_M2V3\_2017a:Plant:Hardware]: Gyroscope%
+          \label{FIG:testPlatform:simulink:plant:hardware:gyroscope}%
+        }}%
+\end{minipage}%
+%}%
+\end{figure}
+%\vspace*{\fill}
+\end{landscape}
+
+
+
+
+\clearpage
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
