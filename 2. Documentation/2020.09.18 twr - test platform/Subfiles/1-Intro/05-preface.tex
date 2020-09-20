@@ -1,0 +1,26 @@
+% !TEX TS-program = arara
+%  arara: lmkclean
+% !arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+% !arara: bibtex
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: pdflatex: { synctex: yes, options: '-file-line-error -halt-on-error' }
+%  arara: lmkclean
+\documentclass[crop=false,float=true,class=article]{standalone}
+
+\providecommand{\main}{../..}
+\input{\main/Subfiles/0-Preamble/0-Preamble.tex}  % Preamble [document configuration]
+
+\begin{document}
+
+This is the abstract ...
+
+\end{document}
+
+
+
+
+
+
+
+
+

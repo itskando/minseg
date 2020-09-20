@@ -1,0 +1,78 @@
+% !TEX spellcheck = English (United States) (Aspell)
+% !TEX TS-program = arara
+%  arara: lmkclean
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: biber
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: pdflatex: { synctex: yes, options: '-file-line-error -halt-on-error' }
+%  arara: lmkclean
+\documentclass[crop=false,float=true,class=scrreprt]{standalone}
+
+\providecommand{\main}{../../..}
+\input{\main/Subfiles/0-Preamble/0-Preamble.tex}  % Preamble [document configuration]
+
+\begin{document}
+
+
+
+
+%\addtocontents{toc}{\string\setcounter{tocdepth}{2}}
+\startcontents[testPlatform:simulink]
+
+%\renewcommand{\sectionedEquation}{\thesubsection--\arabic{equation}}
+%\counterwithin*{equation}{subsection}
+
+
+
+
+\section{Simulink: minseg\_M2V3\_2017a.slx}
+\label{SEC:testPlatform:simulink}
+
+\input{\main/Subfiles/2-Main/03-testPlatform/simulink/00-root.tex}
+
+\iffalse
+
+\singlespacing%
+\printcontents[testPlatform:simulink]{}{1}{%
+  \addtocontents{ptc}{\string\setcounter{tocdepth}{5}}%
+% 
+  \subsection*{List of Contents}%
+  \vspace*{+2em}
+% \addcontentsline{toc}{subsection}{List of Contents}%
+  }%
+\doublespacing%
+\clearpage
+
+\fi
+
+\input{\main/Subfiles/2-Main/03-testPlatform/simulink/root.tex}
+
+\iffalse
+
+\input{\main/Subfiles/2-Main/03-testPlatform/simulink/plant.tex}
+\input{\main/Subfiles/2-Main/03-testPlatform/simulink/controller.tex}
+\input{\main/Subfiles/2-Main/03-testPlatform/simulink/boardIO.tex}
+
+\fi
+
+
+%\renewcommand{\sectionedEquation}{\thesection--\arabic{equation}}
+%\counterwithout*{equation}{subsection}
+
+\stopcontents[testPlatform:simulink]
+%\addtocontents{toc}{\string\setcounter{tocdepth}{1}}
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

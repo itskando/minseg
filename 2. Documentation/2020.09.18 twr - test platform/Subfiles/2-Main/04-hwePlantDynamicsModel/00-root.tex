@@ -1,0 +1,334 @@
+% !TEX spellcheck = English (United States) (Aspell)
+% !TEX TS-program = arara
+%  arara: lmkclean
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: biber
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: pdflatex: { synctex: yes, options: '-file-line-error -halt-on-error' }
+%  arara: lmkclean
+\documentclass[crop=false,float=true,class=scrreprt]{standalone}
+
+\providecommand{\main}{../../..}
+\input{\main/Subfiles/0-Preamble/0-Preamble.tex}  % Preamble [document configuration]
+
+\begin{document}
+
+To simulate the dynamics of the hardware, a hardware-equivalent dynamics model was selected.
+The model was originally derived by
+\textcite{REF:online:2009-yamamoto}
+and has been successfully used in other control studies
+\cite{REF:thesis:masters:2012-peltier}.
+
+\iffalse
+The hardware-equivalent dynamics model is defined in this chapter for convenience with the following order:
+
+\begin{enumerate}[leftmargin=*]
+
+\item A model is developed, which contains nonlinear relations.
+
+\item Key assumptions are made.\\
+      \hspace*{\fill}{\fns[\tif{These linearize and otherwise simplify the originally nonlinear mathematical relationships.}]}
+
+\item The methodology of calculating nonintuitive parameters is discussed.
+
+\end{enumerate}
+\fi
+
+Figures
+\ref{FIG:hwePlantDynamicsModel:isometric}~%
+-~%
+\ref{FIG:hwePlantDynamicsModel:multiview},
+depict the physical model of the two-wheeled inverted pendulum
+as isometric and multiview projections.
+These figures use Yamamoto's original symbol notation;
+a legend is provided in Figure~%
+\ref{FIG:hwePlantDynamicsModel:multiview}.
+
+\textcite{REF:online:2009-yamamoto} makes the following assumptions in Figures
+\ref{FIG:hwePlantDynamicsModel:isometric}~%
+-~%
+\ref{FIG:hwePlantDynamicsModel:multiview}:
+
+\begin{itemize}[leftmargin=*]
+
+\item All mass geometries are uniform.
+
+\item All masses are uniformly distributed.
+
+\item The hardware consists of three principal masses:
+      \begin{itemize}[leftmargin=*,label=$\cdot$,itemsep=-1em]
+      \item A rectangular cuboid
+            \hspace*{\fill}{\fns[\tif{The body}.]}
+      \item A cylinder
+            \hspace*{\fill}{\fns[\tif{The left wheel}.]}
+      \item A cylinder
+            \hspace*{\fill}{\fns[\tif{The right wheel}.]}
+      \end{itemize}
+
+
+\end{itemize}
+
+
+Tables
+\ref{TAB:hwePlantDynamicsModel:variables}~%
+-~%
+\ref{TAB:hwePlantDynamicsModel:parameters},
+define the variables and the parameters, respectively,
+that the physical model of the two-wheeled inverted pendulum will use.
+
+
+
+
+\clearpage
+
+
+
+
+\vspace*{\fill}
+
+
+\begin{figure}[H]%
+\centering%
+\fbox{%
+\includegraphics[trim = 0em 0em 0em 0em, clip, width=0.5\textwidth]{physicalDynamicsModel-isometric.pdf}%
+}%
+\caption[{[Hardware-Equivalent Physical Dynamics Model]: Isometric}]%
+        {{[Hardware-Equivalent Physical Dynamics Model]: Isometric%
+          \cite{REF:online:2009-yamamoto}%
+          \label{FIG:hwePlantDynamicsModel:isometric}%
+        }}%
+\end{figure}
+
+
+\vspace*{\fill}
+
+
+\begin{figure}[H]%
+\centering%
+\fbox{%
+\includegraphics[trim = 0em 0em 0em 0em, clip, width=0.975\textwidth]{physicalDynamicsModel-multiviewLegend}%
+}%
+\caption[{[Hardware-Equivalent Physical Dynamics Model]: Multiview}]%
+        {{[Hardware-Equivalent Physical Dynamics Model]: Multiview%
+          \cite{REF:online:2009-yamamoto}%
+          \label{FIG:hwePlantDynamicsModel:multiview}%
+        }}%
+\end{figure}
+
+
+\vspace*{\fill}
+
+
+
+
+\clearpage
+
+
+
+
+\vspace*{\fill}
+
+\begin{table}[H]
+\centering%
+\fns%
+\caption[{[Hardware-Equivalent Physical Dynamics Model]: Variables}]%
+        {{[Simulink]: Root%
+          \label{TAB:hwePlantDynamicsModel:variables}%
+        }}%
+\newcommand{\colWidth}{0.785\textwidth}
+\begin{tabular}{ | c | c | c | }                                                                          \hline && \\[-2.0em]
+\mc{1}{| c |}{\tbf{Symbol}     } & 
+\mc{1}{  c |}{\tbf{Definition}}  &
+\mc{1}{  c |}{\tbf{Unit}       }                                                               \\[+0.0em] \hline && \\[-2.0em]
+%%
+\begin{tabular}{@{}c@{}}
+$\theta$                              \\[+0.5em]
+$\theta_{g},  \theta_{b}$             \\[+1.0em]
+$\theta_{av}, \theta_{l}, \theta_{r}$ \\
+\end{tabular}
+&
+\begin{tabular}{@{}m{\colWidth}@{}}
+Angular position: Wheel
+\hspace*{\fill }{[$\theta = \theta_{g, av}$] [Measured from the wheel center of mass]}\\[+0em]
+\hspace*{+1.0em}{Origin aligns with:}
+\hspace*{\fill }{\fns $\begin{bmatrix*}[c]
+                       \text{global rejection vector}\\[-0.5em] 
+                       \text{\scs(\tif{orthogonal from earth's surface})}
+                       \end{bmatrix*}$}
+\hspace*{+0.5em}{\fns $\begin{bmatrix*}[c]
+                       \mr{2}{*}{body pitch $\phi_{x}$}\\ \\
+                       \end{bmatrix*}$}\\
+\hspace*{+1.0em}{Component:}
+\hspace*{\fill }{[ average of left and right wheels ]}
+\hspace*{+0.5em}{[ left wheel ]}
+\hspace*{+0.5em}{[ right wheel ]}\\
+\end{tabular}
+&
+$rad$                                                                                          \\[+0.0em] \hline && \\[-2.0em]
+%%
+\begin{tabular}{@{}c@{}}
+$\phi$                         \\
+$\phi_{x}, \phi_{y}, \phi_{z}$ \\
+\end{tabular}
+&
+\begin{tabular}{@{}m{\colWidth}@{}}
+Angular position: Body
+\hspace*{\fill }{\fns[Measured from the wheels center of mass.]}\\
+\hspace*{+1.0em}{Dimension:}
+\hspace*{\fill }{[ X ]}
+\hspace*{+0.5em}{[ Y ]}
+\hspace*{+0.5em}{[ Z ]}\\
+\end{tabular}
+&
+$rad$                                                                                          \\[+0.0em] \hline && \\[-2.0em]
+%%
+\begin{tabular}{@{}c@{}}
+$p$                            \\
+$p_{x}, p_{y}, p_{z}$          \\
+$p_{w}, p_{wl}, p_{wr}, p_{b}$ \\
+\end{tabular}
+&
+\begin{tabular}{@{}m{\colWidth}@{}}
+Translational position
+\hspace*{\fill }{\fns[$p = p_{w}$] [Measured from the corresponding center of mass]}\\
+\hspace*{+1.0em}{Dimension:}
+\hspace*{\fill }{[ X ]}
+\hspace*{+0.5em}{[ Y ]}
+\hspace*{+0.5em}{[ Z ]}\\
+\hspace*{+1.0em}{Component:}
+\hspace*{\fill }{[ both wheels ]}
+\hspace*{+0.5em}{[ left wheel ]}
+\hspace*{+0.5em}{[ right wheel ]}
+\hspace*{+0.5em}{[ body ]} \\
+\end{tabular}
+&
+$m$                                                                                            \\[+0.0em] \hline && \\[-2.0em]
+%%
+\begin{tabular}{@{}c@{}}
+$v_{mtr}$                         \\
+$v_{mtr.l}, v_{mtr.r}$ \\
+\end{tabular}
+&
+\begin{tabular}{@{}m{\colWidth}@{}}
+Voltage: Motor Input\\
+\hspace*{+1.0em}{Component:}
+\hspace*{\fill }{[ left-wheel  ]}
+\hspace*{+0.5em}{[ right-wheel ]}\\
+\end{tabular}
+&
+$V$                                                                                            \\[+0.0em] \hline
+%%
+\end{tabular}
+\tif{Note}: When a subscript is unspecified, assume the first option is used by default.
+\end{table}
+
+
+
+
+\vspace*{\fill}
+
+
+
+
+\begin{table}[H]
+\centering%axle
+\fns%
+\caption[{[Hardware-Equivalent Physical Dynamics Model]: Parameters}]%
+        {{[Simulink]: Root%
+          \label{TAB:hwePlantDynamicsModel:parameters}%
+        }}%
+\begin{tabular}{ | c | l | c | c | c |}                                                                   \hline && \\[-2.0em]
+\mc{1}{| c |}{\tbf{Symbol}    } & 
+\mc{1}{  c |}{\tbf{Definition}} &
+\mc{1}{  c |}{\tbf{Value}     } &
+\mc{1}{  c |}{\tbf{Unit}      } &
+\mc{1}{  c |}{\tbf{Source}    }                                                                \\[+0.0em] \hline && \\[-2.0em]
+%%
+$a_{g}$         & Acceleration of gravity: Earth
+                & 9.81 
+                & $\frac{m}{s^{2}}$
+                & -                                                                            \\[+0.5em] \hline && \\[-2.0em]
+$m_{w}$         & Mass: Wheel
+                  \hspace*{\fill}{\fns[\tif{Includes wheel axle}.]}
+                & 0.018
+                & $kg$
+                & \cite{REF:conference:2015-howard}                                            \\[+0.0em] \hline && \\[-2.0em]
+$m_{b}$         & Mass: Body
+                & 0.381 
+                & $kg$                    
+                & \cite{REF:conference:2015-howard}                                            \\[+0.0em] \hline && \\[-2.0em]
+$l_{b.h}$       & Length: Body: Height
+                & 0.2032
+                & $m$
+                & -                                                                            \\[+0.0em] \hline && \\[-2.0em]
+$l_{b.w}$       & Length: Body: Width
+                & 0.0825
+                & $m$
+                & -                                                                            \\[+0.0em] \hline && \\[-2.0em]
+$l_{b.d}$       & Length: Body: Depth
+                & 0.0635
+                & $m$                     
+                & -                                                                            \\[+0.0em] \hline && \\[-2.0em]
+$l_{b.c2a}$     & \begin{tabular}{@{}m{0.475\textwidth}@{}}
+                  Length: Body: [Center of mass] to [Axis of Rotation]\\
+%                 \hspace*{\fill}{\scs[\tif{Measured from center of mass to center of mass}.]}
+                  \end{tabular}
+                & 0.010
+                & $m$       
+                & Sec. \ref{SEC:hwePlantDynamicsModel:nonintuitiveParameters:lengthBodyc2a}    \\[+0.0em] \hline && \\[-2.0em]
+$r_{w}$         & Length: Wheel: Radius                                     
+                & 0.021
+                & $m$                     
+                & \cite{REF:conference:2015-howard}                                            \\[+0.0em] \hline && \\[-2.0em]
+$J_{b.\phi_{x}}$ & Moment of Inertia: Wheel                   
+                & 7.46 $\cdot$ 10$^{-6}$ 
+                & $kg \cdot m^{2}$        
+                & \cite{REF:conference:2015-howard}                                            \\[+0.0em] \hline && \\[-2.0em]
+$J_{b.\phi_{x}}$ & Moment of Inertia: Body: X-axis (pitch)                   
+                & 1.5573 $\cdot$ 10$^{-5}$
+                & $kg \cdot m^{2}$        
+                & Sec. \ref{SEC:hwePlantDynamicsModel:nonintuitiveParameters:momentOfInertia:bPhiX} \\[+0.0em] \hline && \\[-2.0em]
+$J_{b.\phi_{y}}$ & Moment of Inertia: Body: Y-axis (yaw)                     
+                & 4.2230 $\cdot$ 10$^{-4}$
+                & $kg \cdot m^{2}$        
+                & Sec. \ref{SEC:hwePlantDynamicsModel:nonintuitiveParameters:momentOfInertia:bPhiY} \\[+0.0em] \hline && \\[-2.0em]
+$R_{mtr}$       & Motor: Resistance                     
+                & 4.4
+                & $\Omega$        
+                & \cite{REF:conference:2015-howard}                                            \\[+0.0em] \hline && \\[-2.0em]
+$k_{mtr.bEMF}$  & Motor: Coefficient of Back EMF
+                & 0.495
+                & $\frac{V \cdot s}{rad}$ 
+                & \cite{REF:conference:2015-howard}                                            \\[+0.0em] \hline && \\[-2.0em]
+$k_{mtr.T}$     & Motor: Coefficient of Torque
+                & 0.470
+                & $\frac{N \cdot m}{A}$   
+                & \cite{REF:conference:2015-howard}                                            \\[+0.0em] \hline && \\[-2.0em]
+$k_{fr.m2w}$    & Motor: Coefficient of friction: [DC Motor] to [Wheel]
+                & 0.0664
+                & -
+                & %Sec. \ref{SEC:hwePlantDynamicsModel:nonintuitiveParameters:motorCoefficientOfFriction} 
+                  -                                                                            \\[+0.0em] \hline
+\end{tabular}
+\end{table}
+
+\vspace*{\fill}
+
+
+
+\clearpage
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

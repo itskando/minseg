@@ -1,0 +1,17 @@
+% References
+
+% Prevent empty parenthesis for websites without a creation date when using ieee style:
+\xpatchbibdriver{online}
+  {\printtext[parens]{\usebibmacro{date}}}
+  {\iffieldundef{year}
+    {}
+    {\printtext[parens]{\usebibmacro{date}}}}
+  {}
+  {\typeout{There was an error patching biblatex-ieee (specifically, ieee.bbx's @online driver)}}
+% NOTE: requires \usepackage{xpatch}
+% Source: https://tex.stackexchange.com/questions/151217/remove-parentheses-for-empty-year-field-biblatex-ieee-style
+
+
+\addbibresource{\main/Subfiles/0-Preamble/references.bib}
+
+%\AtBeginDocument{\renewcommand{\bibname}{Bibliography}}

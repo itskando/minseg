@@ -1,0 +1,84 @@
+% !TEX TS-program = arara
+%  arara: lmkclean
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: biber
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: pdflatex: { synctex: yes, options: '-file-line-error -halt-on-error' }
+%  arara: lmkclean
+\documentclass[crop=false,float=true,class=scrreprt]{standalone}
+
+\providecommand{\main}{../../..}
+\input{\main/Subfiles/0-Preamble/0-Preamble.tex}  % Preamble [document configuration]
+
+\begin{document}
+
+
+
+
+The test platform consists of the designated hardware,
+{\fns[\tif{MinSeg M2V3 two-wheeled robot, see Section~\ref{SEC:preliminaryDecisions:selectHardware:minseg}}]},
+and the designated development PC,
+{\fns[\tif{see Section~\ref{SEC:preliminaryDecisions:selectHardware:developmentPC}}]}.
+To interface with the hardware,
+a Simulink model and a hierarchy of Matlab subscripts were created.
+
+The Simulink model is capable of: 
+
+\begin{itemize}[leftmargin=*, label=$\vcenter{\hbox{\tiny$\bullet$}}$, itemsep=-1em]
+
+\item Acting as an algorithm with which to program the hardware, such that it may:
+      \vspace*{-1em}
+      \begin{itemize}[leftmargin=*, label=$\cdot$, itemsep=-1em]
+      
+      \item Process
+      
+      \item Actuate
+      
+      \item Communicate
+      
+      \end{itemize}
+
+\item Simulate an equivalent model of "the hardware when loaded with the same algorithm".
+
+\end{itemize}
+
+
+The Matlab script hierarchy is capable of:
+
+\begin{itemize}[leftmargin=*, label=$\vcenter{\hbox{\tiny$\bullet$}}$, itemsep=-1em]
+
+\item Initialize model parameters.
+
+\item Reconfigure model subsystems.
+
+\item Initialize a build or simulate event.
+
+\item Initialize a read or write event.
+
+\item Post-process raw read data.
+
+\item Save processed read data as well as other configuration data.
+
+\item Plot processed read data.
+
+\end{itemize}
+
+
+
+
+\clearpage 
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

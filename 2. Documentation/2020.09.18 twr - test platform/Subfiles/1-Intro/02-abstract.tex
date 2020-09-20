@@ -1,0 +1,60 @@
+%!!TEX root = ../../2016.02.08_Kando_Thesis.tex
+% !TEX spellcheck = English
+% !TEX TS-program = arara
+%  arara: lmkclean
+% !arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+% !arara: bibtex
+% !arara: biber
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: pdflatex: { synctex: yes, options: '-file-line-error -halt-on-error' }
+%  arara: lmkclean
+\documentclass[crop=false,float=true,class=scrreprt]{standalone}
+
+\providecommand{\main}{../..}
+\input{\main/Subfiles/0-Preamble/0-Preamble.tex}  % Preamble [document configuration]
+
+\begin{document}
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+
+This thesis develops a test platform for a control problem.
+
+The inverted pendulum is selected as a well-established control problem.
+It is representative of an unstable nonlinear system
+which may remain balanced using any of several methods. 
+Once balancing is achieved, 
+multidimensional maneuvering is added as a supplemental control objective.
+
+To approach the control problem hardware is selected
+which is then characterized and simulated, 
+and then operated while communicating operational data.
+
+The thesis provides a detailed description of the approaches to:
+
+\begin{itemize}[leftmargin=*]
+\item Selecting the hardware.
+\item Characterizing the hardware.
+\item Developing a functioning controller.
+\item Simulating the results.
+\end{itemize}
+
+Additionally, a modular test platform is developed 
+such that additional control approaches
+or characterization models could be implemented and hot-swapped.
+
+\clearpage
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,542 @@
+% !TEX spellcheck = English (United States) (Aspell)
+% !TEX TS-program = arara
+%  arara: lmkclean
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: biber
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: pdflatex: { synctex: yes, options: '-file-line-error -halt-on-error' }
+%  arara: lmkclean
+\documentclass[crop=false,float=true,class=scrreprt]{standalone}
+
+\providecommand{\main}{../../..}
+\input{\main/Subfiles/0-Preamble/0-Preamble.tex}  % Preamble [document configuration]
+
+\begin{document}
+
+\section{State-Space Representation}
+\label{SEC:hwePlantDynamicsModel:stateSpaceRepresentation}
+
+The general form of state-space representation is exhibited in Equation~%
+\eqref{EQN:hwePlantDynamicsModel:stateSpaceRepresentation:general}.
+
+\vspace{-1em}
+
+\begin{equation}
+\label{EQN:hwePlantDynamicsModel:stateSpaceRepresentation:general}
+\begin{array}{ccccccccc}
+\uns{\mbf{\dot{x}}}{n x 1}
+& = &
+\uns{\mbf{A}}{n x n} 
+& \cdot &
+\uns{\mbf{x}}{n x 1} 
+& + & 
+\uns{\mbf{B}}{n x p} 
+& \cdot &
+\uns{\mbf{u}}{p x 1} 
+\\
+\uns{\mbf{y}}{m x 1} 
+& = &
+\uns{\mbf{C}}{m x n} 
+& \cdot &
+\uns{\mbf{x}}{n x 1} 
+& + &
+\uns{\mbf{D}}{m x p} 
+& \cdot &
+\uns{\mbf{u}}{p x 1}
+\end{array}
+\end{equation}
+
+
+
+
+The designated $x$ states and $p$ inputs are exhibited in Equations
+\eqref{EQN:hwePlantDynamicsModel:stateSpaceRepresentation:states}~%
+-~%
+\eqref{EQN:hwePlantDynamicsModel:stateSpaceRepresentation:inputs}.
+
+
+\vspace{+1em}
+
+%\begin{minipage}{0.5\textwidth}%
+%%
+\begin{equation}
+\label{EQN:hwePlantDynamicsModel:stateSpaceRepresentation:states}
+\begin{array}{ccccccc}
+\uns{\mbf{x}}{n x 1}
+& = &
+\begin{bmatrix}
+\hphantom{v_{mtr.l}}\\[-2em]
+\theta         \\
+\phi_{x}       \\
+\dot{\theta}   \\
+\dot{\phi_{x}} \\
+\phi_{y}       \\
+\dot{\phi_{y}} \\
+\end{bmatrix}
+\end{array}
+\end{equation}
+%%
+%\end{minipage}%
+%%
+%%
+\vspace{+2em}
+%%
+%%
+%\begin{minipage}{0.5\textwidth}%
+%%
+\begin{equation}
+\label{EQN:hwePlantDynamicsModel:stateSpaceRepresentation:inputs}
+\begin{array}{ccccccc}
+\uns{\mbf{u}}{p x 1}
+& = &
+\begin{bmatrix}
+v_{mtr.l} \\
+v_{mtr.r} \\
+\end{bmatrix}
+\end{array}
+\end{equation}
+%%
+%\end{minipage}
+
+
+
+
+\clearpage
+
+
+
+
+The derivation of indices for the system matrices $\mbf{A}$ and $\mbf{B}$ which are nonintuitive are derived
+from Equations
+\eqref{EQN:hwePlantDynamicsModel:differentialEquation1}~%
+-~%
+\eqref{EQN:hwePlantDynamicsModel:differentialEquation2}.
+in Equations
+\eqref{EQN:hwePlantDynamicsModel:stateSpaceRepresentation1}~%
+-~%
+\eqref{EQN:hwePlantDynamicsModel:stateSpaceRepresentation2}.
+
+
+\vspace*{+0em}
+
+
+\begin{equation}
+\label{EQN:hwePlantDynamicsModel:stateSpaceRepresentation1}
+\begin{array}{ccccccccccc}
+\mbf{K}_{1.\ddot{x}}
+& \cdot 
+\begin{bmatrix}
+\ddot{\theta}  \\
+\ddot{\phi}_{x}\\
+\end{bmatrix}
+& + &
+\mbf{K}_{1.\dot{x}}
+& \cdot 
+\begin{bmatrix}
+\dot{\theta}  \\
+\dot{\phi}_{x}\\
+\end{bmatrix}
+& + &
+\mbf{K}_{1.x}
+& \cdot 
+\begin{bmatrix}
+\theta  \\
+\phi_{x}\\
+\end{bmatrix}
+& = &
+\mbf{K}_{1.v}
+& \cdot
+\begin{bmatrix}
+v_{mtr.l}\\
+v_{mtr.r}\\
+\end{bmatrix}
+%%
+\\[+2em]
+%%
+
+& \hphantom{\cdot}
+\begin{bmatrix}
+\ddot{\theta}  \\
+\ddot{\phi}_{x}\\
+\end{bmatrix}
+& = &
+\underbrace{
+\vphantom{\begin{bmatrix} a \\ a \\ \end{bmatrix}}
+\begin{matrix}
+-\mbf{K}_{1.\ddot{x}}^{-1}
+\cdot 
+\mbf{K}_{1.\dot{x}}
+\end{matrix}
+}_{\mbf{A}_{1}}
+& \cdot 
+\begin{bmatrix}
+\dot{\theta}  \\
+\dot{\phi}_{x}\\
+\end{bmatrix}
+& + &
+\underbrace{
+\vphantom{\begin{bmatrix} a \\ a \\ \end{bmatrix}}
+\begin{matrix}
+-\mbf{K}_{1.\ddot{x}}^{-1}
+\cdot 
+\mbf{K}_{1.x}
+\end{matrix}
+}_{\mbf{A}_{0}}
+& \cdot 
+\begin{bmatrix}
+\theta  \\
+\phi_{x}\\
+\end{bmatrix}
+& + &
+\underbrace{
+\vphantom{\begin{bmatrix} a \\ a \\ \end{bmatrix}}
+\begin{matrix}
+\mbf{K}_{1.\ddot{x}}^{-1}
+\cdot 
+\mbf{K}_{1.v}
+\end{matrix}
+}_{\mbf{B}_{1}}
+& \cdot
+\begin{bmatrix}
+v_{mtr.l}\\
+v_{mtr.r}\\
+\end{bmatrix}
+\end{array}
+%%
+\end{equation}
+
+
+
+
+\vspace{+1em}
+
+
+
+
+\begin{equation}
+\label{EQN:hwePlantDynamicsModel:stateSpaceRepresentation2}
+\begin{array}{ccccccccccc}
+k_{2.\ddot{x}}
+& \cdot 
+\begin{bmatrix}
+\ddot{\phi}_{y}\\
+\end{bmatrix}
+& + &
+k_{2.\dot{x}} 
+& \cdot 
+\begin{bmatrix}
+\dot{\phi}_{y}\\
+\end{bmatrix}
+& = &
+k_{2.v}
+& \cdot
+\begin{bmatrix}
+v_{mtr.r} - v_{mtr.l}\\
+\end{bmatrix}
+%%
+\\[+1em]
+%%
+
+& \hphantom{\cdot}
+\begin{bmatrix}
+\ddot{\phi}_{y}\\
+\end{bmatrix}
+& = &
+\underbrace{
+\vphantom{\begin{bmatrix} a \\ \end{bmatrix}}
+\begin{matrix}
+-k_{2.\ddot{x}}^{-1}
+\cdot 
+k_{2.\dot{x}} 
+\end{matrix}
+}_{A_{2}}
+& \cdot 
+\begin{bmatrix}
+\dot{\phi}_{y}\\
+\end{bmatrix}
+& + &
+\underbrace{
+\vphantom{\begin{bmatrix} a \\ \end{bmatrix}}
+\begin{matrix}
+k_{2.\ddot{x}}^{-1}
+\cdot 
+k_{2.v}
+\end{matrix}
+}_{B_{2}}
+& \cdot
+\begin{bmatrix}
+v_{mtr.r} - v_{mtr.l}\\
+\end{bmatrix}
+\end{array}
+%%
+\end{equation}
+
+
+
+
+\vspace*{\fill}
+
+
+
+Note that $K_{1.\ddot{x}}$ 
+must be invertible
+to perform the second step in
+in Equation~%
+\eqref{EQN:hwePlantDynamicsModel:stateSpaceRepresentation1}.
+The derivation for matrix invertibility
+and the proof that $K_{1.\ddot{x}}$ is nonsingular {\fns[\tif{and is therefore invertible}]},
+are exhibited in Equations
+\eqref{EQN:hwePlantDynamicsModel:stateSpaceRepresentation:nonsingular:start}~%
+-~%
+\eqref{EQN:hwePlantDynamicsModel:stateSpaceRepresentation:nonsingular:end}.
+
+
+
+
+\vspace*{+0em}
+
+
+\begin{gather}
+\label{EQN:hwePlantDynamicsModel:stateSpaceRepresentation:nonsingular:start}
+\begin{array}{ccc}
+\uns{
+\begin{matrix}
+\mbf{X}
+\end{matrix}
+}{2 x 2}
+& = &
+\begin{bmatrix}
++X_{(1,1)} & +X_{(1,2)} \\
++X_{(2,1)} & +X_{(2,2)} \\
+\end{bmatrix}
+\end{array}
+%%
+\\[+2em]
+%%
+\begin{array}{ccccccccccc}
+\mbf{X}^{-1}
+& = &
+\displaystyle\frac{1}{\mrm{det}(\mbf{X})} \cdot \mrm{adj}(\mbf{X})
+& = &
+\displaystyle\frac{1}{X_{(1,1)} \cdot X_{(2,2)} - X_{(1,2)} \cdot X_{(2,1)}} 
+\cdot
+\begin{bmatrix}
++X_{(2,2)} & -X_{(2,1)} \\
+-X_{(1,2)} & +X_{(1,1)} \\
+\end{bmatrix}
+\end{array}
+%%
+\\[+2em]
+%%
+\begin{array}{ccc}
+\mrm{det}(\mbf{X})
+& \neq &
+0
+\end{array}
+%%
+\\[+2em]
+%%
+\label{EQN:hwePlantDynamicsModel:stateSpaceRepresentation:nonsingular:end}
+\begin{array}{ccccccc}
+\mrm{det}(\mbf{K}_{1.\ddot{x}})
+& =    &
+k_{1.1} \cdot k_{1.3} - k_{1.2} \cdot k_{1.2}
+& \neq &
+0
+\end{array}
+%%
+\end{gather}
+
+
+
+
+%\vspace*{\fill}
+
+
+
+
+
+\clearpage
+
+
+
+
+The $\mbf{A}$ matrix and the state vector $\mbf{x}$ are exhibited in Equation~%
+\eqref{EQN:hwePlantDynamicsModel:stateSpaceRepresentation:A}.
+
+
+\vspace{-2em}
+
+
+\begin{equation}
+\label{EQN:hwePlantDynamicsModel:stateSpaceRepresentation:A}
+\begin{array}{ccccccc}
+\uns{\mbf{A}}{n x n}
+& \cdot &
+\uns{\mbf{x}}{n x 1}
+& = &
+\begin{bmatrix}
+\hphantom{v_{mtr.l}}\\[-2em]
+\begin{array}{cccccc}
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 \\
+\mbf{A}_{0\ (1,1)} & \mbf{A}_{0\ (1,2)} & \mbf{A}_{1\ (1,1)} & \mbf{A}_{1\ (1,2)} & 0 & 0 \\
+\mbf{A}_{0\ (2,1)} & \mbf{A}_{0\ (2,2)} & \mbf{A}_{1\ (2,1)} & \mbf{A}_{1\ (2,2)} & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1     \\
+0 & 0 & 0 & 0 & 0 & A_{2} \\
+\end{array}
+\end{bmatrix}
+& \cdot &
+\begin{bmatrix}
+\hphantom{v_{mtr.l}}\\[-2em]
+\theta         \\
+\phi_{x}       \\
+\dot{\theta}   \\
+\dot{\phi_{x}} \\
+\phi_{y}       \\
+\dot{\phi_{y}} \\
+\end{bmatrix}
+\end{array}
+\end{equation}
+
+
+\vspace{-1em}
+
+
+
+
+The $\mbf{B}$ matrix and the input vector $\mbf{u}$ are exhibited in Equation~%
+\eqref{EQN:hwePlantDynamicsModel:stateSpaceRepresentation:B}.
+
+
+\vspace{-1em}
+
+
+\begin{equation}
+\label{EQN:hwePlantDynamicsModel:stateSpaceRepresentation:B}
+\begin{array}{ccccccc}
+\uns{\mbf{B}}{n x p}
+& \cdot &
+\uns{\mbf{u}}{p x 1}
+& = &
+\begin{bmatrix}
+%\hphantom{v_{mtr.l}}\\[-2em]
+\begin{array}{cccccc}
+0 & 0 \\
+0 & 0 \\
+\mbf{B_{1\ (1,1)}} & \mbf{B_{1\ (1,2)}} \\
+\mbf{B_{1\ (2,1)}} & \mbf{B_{1\ (2,2)}} \\
+0 & 0 \\
+-B_{2} & +B_{2} \\
+\end{array}
+\end{bmatrix}
+& \cdot &
+\begin{bmatrix}
+v_{mtr.l} \\
+v_{mtr.r} \\
+\end{bmatrix}
+\end{array}
+\end{equation}
+
+\vspace{-1em}
+
+
+
+
+The $\mbf{C}$ matrix and the state vector $\mbf{x}$ are exhibited in Equation~%
+\eqref{EQN:hwePlantDynamicsModel:stateSpaceRepresentation:C}.
+
+
+\vspace{-1em}
+
+
+\begin{equation}
+\label{EQN:hwePlantDynamicsModel:stateSpaceRepresentation:C}
+\begin{array}{ccccccccccccccc}
+\uns{\mbf{C}}{m x n}
+& \cdot &
+\uns{\mbf{x}}{n x 1}
+& = &
+\begin{bmatrix}
+\hphantom{v_{mtr.l}}\\[-2em]
+\begin{array}{cccccc}
+1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 \\
+\end{array}
+\end{bmatrix}
+& \cdot &
+\begin{bmatrix}
+\hphantom{v_{mtr.l}}\\[-2em]
+\theta         \\
+\phi_{x}       \\
+\dot{\theta}   \\
+\dot{\phi_{x}} \\
+\phi_{y}       \\
+\dot{\phi_{y}} \\
+\end{bmatrix}
+\end{array}
+\end{equation}
+
+
+\vspace{-1em}
+
+
+
+
+The $\mbf{D}$ matrix and the input vector $\mbf{u}$ are exhibited in Equation~%
+\eqref{EQN:hwePlantDynamicsModel:stateSpaceRepresentation:D}.
+
+
+\vspace{-1em}
+
+
+\begin{equation}
+\label{EQN:hwePlantDynamicsModel:stateSpaceRepresentation:D}
+\begin{array}{ccccccccccccccc}
+\uns{\mbf{D}}{m x p}
+& \cdot &
+\uns{\mbf{u}}{p x 1}
+& = &
+\begin{bmatrix}
+%\hphantom{v_{mtr.l}}\\[-2em]
+\begin{array}{cccccc}
+0 & 0 \\
+0 & 0 \\
+0 & 0 \\
+0 & 0 \\
+0 & 0 \\
+0 & 0 \\
+\end{array}
+\end{bmatrix}
+& \cdot &
+\begin{bmatrix}
+v_{mtr.l} \\
+v_{mtr.r} \\
+\end{bmatrix}
+\end{array}
+\end{equation}
+
+
+
+
+
+\clearpage
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

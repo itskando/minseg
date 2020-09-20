@@ -1,0 +1,79 @@
+% !TeX document-id = {8ebe89f4-14fa-44c3-a184-4e485a4d4b1b}
+% !TEX spellcheck = English (United States) (Aspell)
+% !TEX TS-program = arara
+%  arara: clean   : { extensions: [aux,bbl,bcf,blg,glg,glo,gls,idx,ilg,ind,ist,log,lof,lol,lot,out,ptc,toc,run.xml] }
+%  arara: pdflatex: {               options: ['-file-line-error','-halt-on-error','-ini','"&pdflatex"','mylatexformat.ltx'] }
+%  arara: pdflatex: {   draft: yes, options: ['-file-line-error','-halt-on-error','-fmt=mylatexformat'] }
+%  arara: biber
+%  arara: pdflatex: {   draft: yes, options: ['-file-line-error','-halt-on-error','-fmt=mylatexformat'] }
+%  arara: pdflatex: { synctex: yes, options: ['-file-line-error','-halt-on-error','-fmt=mylatexformat'] }
+%  arara: clean   : { extensions: [aux,bbl,bcf,blg,glg,glo,gls,idx,ilg,ind,ist,log,lof,lol,lot,out,ptc,toc,run.xml] }
+\documentclass[crop=false,float=true,class=scrreprt]{standalone}
+
+\providecommand{\main}{.}
+\input{\main/Subfiles/0-Preamble/0-Preamble.tex}  % Preamble [document configuration]
+
+\begin{document}
+
+% 01-Intro
+ \pagenumbering{roman}
+ \setcounter{page}{0}
+ \pagestyle{trueempty}
+ 
+ \input{\main/Subfiles/1-Intro/00-titlePage.tex}
+ \input{\main/Subfiles/1-Intro/01-approvalPageElectronic.tex}
+%\input{\main/Subfiles/1-Intro/01-approvalPagePrint.tex}
+ \input{\main/Subfiles/1-Intro/02-abstract.tex}          \addtocontents{toc}{\string\vspace{-1em}}
+ 
+ \pagestyle{scrheadings}
+ 
+ \input{\main/Subfiles/1-Intro/03-acknowledgements.tex}  \addtocontents{toc}{\string\vspace{-1em}}
+ \input{\main/Subfiles/1-Intro/04-dedication.tex}        \addtocontents{toc}{\string\vspace{-0em}}
+%\input{\main/Subfiles/1-Intro/05-preface.tex}           \addtocontents{toc}{\string\vspace{-0em}}
+ 
+ \addcontentsline{toc}{chapter}{Table of Contents}       \addtocontents{toc}{\string\vspace{-1em}} \tableofcontents   \clearpage
+ \addcontentsline{toc}{chapter}{List of Figures}         \addtocontents{toc}{\string\vspace{-1em}} \listoffigures     \clearpage
+ \addcontentsline{toc}{chapter}{List of Tables}          \addtocontents{toc}{\string\vspace{-1em}} \listoftables      \clearpage
+ \addcontentsline{toc}{chapter}{List of Code Listings}   \addtocontents{toc}{\string\vspace{-0em}} \lstlistoflistings \clearpage
+ 
+%\input{\main/Subfiles/1-Intro/06-Nomenclature.text}
+
+
+% 02-Main
+ \pagenumbering{arabic}
+ \setcounter{page}{1}
+ 
+ \addtocontents{toc}{\string\setcounter{tocdepth}{2}}
+                                                            %\addtocontents{toc}{\string\clearpage}
+ \input{\main/Subfiles/2-Main/01-introduction.tex}          %\addtocontents{toc}{\string\clearpage}
+ \input{\main/Subfiles/2-Main/02-preliminaryDecisions.tex}  %\addtocontents{toc}{\string\clearpage}
+ \input{\main/Subfiles/2-Main/04-hwePlantDynamicsModel.tex} %\addtocontents{toc}{\string\clearpage}
+ \input{\main/Subfiles/2-Main/05-controlDesign.tex}         %\addtocontents{toc}{\string\clearpage}
+ \input{\main/Subfiles/2-Main/03-testPlatform.tex}          %\addtocontents{toc}{\string\clearpage}
+ \input{\main/Subfiles/2-Main/zz-conclusions.tex}           %\addtocontents{toc}{\string\clearpage}
+
+
+% 03-Append
+%\textbf{\LARGE{Appendices}}
+%\addappheadtotoc
+\begin{appendices}
+
+%\addtocontents{toc}{\string\setcounter{tocdepth}{3}}
+
+ \input{\main/Subfiles/3-Append/matlabFiles.tex}
+
+\end{appendices}
+
+ \nocite{*} 
+ \printbibliography[heading=bibintoc, title={Bibliography}]
+
+\end{document}
+
+
+
+
+
+
+
+
+

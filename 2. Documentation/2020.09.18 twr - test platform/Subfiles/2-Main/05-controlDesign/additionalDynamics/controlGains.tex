@@ -1,0 +1,356 @@
+% !TEX TS-program = arara
+%  arara: lmkclean
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: biber
+%  arara: pdflatex: {   draft: yes, options: '-file-line-error -halt-on-error' }
+%  arara: pdflatex: { synctex: yes, options: '-file-line-error -halt-on-error' }
+%  arara: lmkclean
+\documentclass[crop=false,float=true,class=scrreprt]{standalone}
+
+\providecommand{\main}{../../../..}
+\input{\main/Subfiles/0-Preamble/0-Preamble.tex}  % Preamble [document configuration]
+
+\begin{document}
+
+\subsection{Control Gains}
+\label{SEC:controllerDesign:additionalDynamics}
+
+Once the additional dynamics are established,
+state feedback gains must be calculated.
+Multiple methods exist to calculate these gains.
+The most established methods involve optimization or pole-placement.
+
+
+\subsubsection{Optimal}
+\label{SEC:controllerDesign:additionalDynamics:optimal}
+
+Several optimal control techniques exist
+\cite{REF:textbook:1995-lewis}.
+This section will focus on linear quadratic regulation techniques.
+
+%\subsubsubsection{Background}
+\subsubsubsection{Implementation}
+
+In order to determine the feedback gains of the system,
+the state-space representation of the system,
+{\fns[\tif{the plant and the additional dynamics}]},
+is input into a 
+discrete linear quadratic regulator gain-calculation Matlab function, \tif{dlqr},
+which outputs state-feedback gains which best minimize the quadratic cost function.
+The Matlab function also requires quadratic cost function matrices $Q$ and $R$ as inputs.
+
+The quadratic cost matrices $Q$ and $R$ were determined through trial and error;
+however, some constraints existed.
+The $Q$ and $R$ matrices were both diagonal matrices;
+{\fns[\tif{thus, all indices which are not on the diagonal are equal to zero}]}.
+Also, the $R$ matrix was left as an identity matrix until the $Q$ matrix 
+established desirable behavior.
+Once desirable behavior was established, 
+the option of multiplying the $R$ matrix by a scalar value {\fns[\tif{greater than one}]} became a consideration.
+
+Multiplying the $R$ matrix by a scalar value decreases the response time of the controller;
+however, this also decreases the peak magnitude of the control output,
+{\fns[\tif{in this case, motor voltage}]}.
+While a decreased response time is generally undesirable,
+the reduction of the control output can be necessary in certain circumstances.
+For example, the maximum permissible value for the control output, motor voltage, 
+is limited by the nominal voltage provided by the hardware power source.
+
+
+
+
+\clearpage
+
+
+
+
+\subsubsubsection{Results: Simulation}
+\label{SEC:controllerDesign:additionalDynamics:optimal:results:simulation}
+
+To demonstrate the capabilities of the device,
+a dynamic command is provided which attempts to move the device
+in the shape of an eight $8$ on the ground
+while maintaining balance.
+
+The specific Q and R weighting matrices which were selected to calculate the control gains
+are exhibited in Equation~%
+\eqref{EQN:controllerDesign:additionalDynamics:optimal:results:simulation:QR}.
+
+\vspace{-0em}
+\begin{equation}
+\label{EQN:controllerDesign:additionalDynamics:optimal:results:simulation:QR}
+\begin{array}{ccccl}
+Q
+& = &
+\displaystyle\uns{\mrm{I}}{6 x 6}
+& \cdot &
+\begin{bmatrix}
+6 & 1 & 1 & 1 & 1 & 1 & 21 & 11
+\end{bmatrix}^{\mrm{T}}
+\\[+1em]
+R
+& = &
+\displaystyle\uns{\mrm{I}}{2 x 2}
+& \cdot &
+\begin{bmatrix}
+1 & 1
+\end{bmatrix}^{\mrm{T}}
+\end{array}
+\end{equation}
+\vspace{-0.5em}
+
+Recall that Q is with respect to the states of the global system,
+{\fns[\tif{plant and reference tracking dynamics}]}
+and 
+that R is with respect to inputs of the global system
+{\fns[\tif{reference tracking input error}]}.
+
+Note that the greatest weights have been applied to the reference tracking states,
+and also that additional weight has been provided to the wheel angular position state $\theta$,
+in the cases of the plant states as well as the reference tracking states, respectively.
+
+This results in the feedback gain matrices $K$ exhibited in Equation~%
+\eqref{EQN:controllerDesign:additionalDynamics:optimal:results:simulation:K}.
+
+
+Additionally, the device starts at a body angular position (pitch) $\phi_x$ of $0.03\ [rad]$.
+This represents the inability to start the device at a perfect angle.
+This causes additional transients in the initial milliseconds of operation.
+
+Figures
+\ref{FIG:controllerDesign:additionalDynamics:optimal:results:simulation:theta}~%
+-~%
+\ref{FIG:controllerDesign:additionalDynamics:optimal:results:simulation:vMotorDriver}
+depict the system state during its operation
+while completing its response to a figure-eight linear position command.
+
+
+
+
+\clearpage
+
+
+
+
+\begin{landscape}
+
+\vspace*{\fill}
+\begin{equation}
+\fns
+\label{EQN:controllerDesign:additionalDynamics:optimal:results:simulation:K}
+\begin{array}{ccl}
+K_{plant}
+& = &
+\begin{bmatrix}
+-50.3100392458413 & -67.5072785023266 & -6.36629920161377 & -1.55714590289198 & -31.3872481064794 & -0.0172137559799668 \\
+-50.3100392458415 & -67.5072785023269 & -6.36629920161380 & -1.55714590289199 & +31.3872481064798 & +0.0172137559799669 \\
+\end{bmatrix}^{\mrm{T}}
+\\[+4em]
+K_{referenceTracking}
+& = &
+\begin{bmatrix}
+-2.29913264446660 & -2.07850353527147 \\
+-2.29913264446662 & +2.07850353527155 \\
+\end{bmatrix}^{\mrm{T}}
+\end{array}
+\end{equation}
+\vspace*{+4.5em}
+\vspace*{\fill}
+
+\end{landscape}
+
+
+
+
+\clearpage
+
+
+
+
+\vspace*{\fill}
+\begin{figure}[H]%
+\centering%
+\includegraphics[trim = 0em 0em 0em 0em, clip, width=0.975\textwidth]{theta.pdf}%
+\caption[{[Control Gains: LQR]: Simulation Results: Wheel Angular Position $\theta$}]%
+        {{[Control Gains: LQR]: Simulation Results: Wheel Angular Position $\theta$%
+          \label{FIG:controllerDesign:additionalDynamics:optimal:results:simulation:theta}%
+        }}%
+\end{figure}
+\vspace*{\fill}
+
+
+
+
+\clearpage
+
+
+
+
+
+\vspace*{\fill}
+\begin{figure}[H]%
+\centering%
+\includegraphics[trim = 0em 0em 0em 0em, clip, width=0.975\textwidth]{phi-y.pdf}%
+\caption[{[Control Gains: LQR]: Simulation Results: Body Angular Position $\phi_{y}$}]%
+        {{[Control Gains: LQR]: Simulation Results: Body Angular Position $\phi_{y}$%
+          \label{FIG:controllerDesign:additionalDynamics:optimal:results:simulation:phiY}%
+        }}%
+\end{figure}
+\vspace*{\fill}
+
+
+
+
+\clearpage
+
+
+
+
+
+\vspace*{\fill}
+\begin{figure}[H]%
+\centering%
+\includegraphics[trim = 0em 0em 0em 0em, clip, width=0.975\textwidth]{phi-x.pdf}%
+\caption[{[Control Gains: LQR]: Simulation Results: Body Angular Position $\phi_{x}$}]%
+        {{[Control Gains: LQR]: Simulation Results: Body Angular Position $\phi_{x}$%
+          \label{FIG:controllerDesign:additionalDynamics:optimal:results:simulation:phiX}%
+        }}%
+\end{figure}
+\vspace*{\fill}
+
+
+
+
+\clearpage
+
+
+
+
+
+\vspace*{\fill}
+\begin{figure}[H]%
+\centering%
+\includegraphics[trim = 0em 0em 0em 0em, clip, width=0.975\textwidth]{p-x.pdf}%
+\caption[{[Control Gains: LQR]: Simulation Results: Wheel Linear Position $p_{x}$}]%
+        {{[Control Gains: LQR]: Simulation Results: Wheel Linear Position $p_{x}$%
+          \label{FIG:controllerDesign:additionalDynamics:optimal:results:simulation:pX}%
+        }}%
+\end{figure}
+\vspace*{\fill}
+
+
+
+
+\clearpage
+
+
+
+
+
+\vspace*{\fill}
+\begin{figure}[H]%
+\centering%
+\includegraphics[trim = 0em 0em 0em 0em, clip, width=0.975\textwidth]{p-y.pdf}%
+\caption[{[Control Gains: LQR]: Simulation Results: Wheel Linear Position $p_{y}$}]%
+        {{[Control Gains: LQR]: Simulation Results: Wheel Linear Position $p_{y}$%
+          \label{FIG:controllerDesign:additionalDynamics:optimal:results:simulation:pY}%
+        }}%
+\end{figure}
+\vspace*{\fill}
+
+
+
+
+\clearpage
+
+
+
+
+
+\vspace*{\fill}
+\begin{figure}[H]%
+\centering%
+\includegraphics[trim = 0em 0em 0em 0em, clip, width=0.975\textwidth]{p-xy.pdf}%
+\caption[{[Control Gains: LQR]: Simulation Results: Wheel Linear Position $p_{xy}$}]%
+        {{[Control Gains: LQR]: Simulation Results: Wheel Linear Position $p_{xy}$%
+          \label{FIG:controllerDesign:additionalDynamics:optimal:results:simulation:pXY}%
+        }}%
+\end{figure}
+\vspace*{\fill}
+
+
+
+
+\clearpage
+
+
+
+
+
+\vspace*{\fill}
+\begin{figure}[H]%
+\centering%
+\includegraphics[trim = 0em 0em 0em 0em, clip, width=0.975\textwidth]{v-lm.pdf}%
+\caption[{[Control Gains: LQR]: Simulation Results: Motor Driver Commanded Voltage $v_{motorDriver}$}]%
+        {{[Control Gains: LQR]: Simulation Results: Motor Driver Commanded Voltage $v_{motorDriver}$%
+          \label{FIG:controllerDesign:additionalDynamics:optimal:results:simulation:vMotorDriver}%
+        }}%
+\end{figure}
+\vspace*{\fill}
+
+
+
+
+\clearpage
+
+
+
+
+
+
+
+%\subsubsubsection{Hardware Implementation}
+
+
+
+
+
+
+\clearpage
+
+
+
+
+\iffalse
+
+\subsubsection{Pole-Placement}
+
+Several pole-placement techniques also exist
+\cite{REF:textbook:1995-vaccaro}.
+This section is representative of future work with the system.
+
+\subsubsubsection{Background}
+\subsubsubsection{Simulation Implementation}
+\subsubsubsection{Hardware Implementation}
+
+
+
+
+\clearpage
+
+\fi
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
