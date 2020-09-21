@@ -39,11 +39,21 @@ download 'CH340 chip driver' (for mac):\
 source: \
 https://arduino.stackexchange.com/questions/12133/mac-osx-yosemite-no-serial-ports-showing-for-uno-r3\
 \
-note: install will require restart.\
- \
-result : driver    appear in matlab: hardware support package for arduino.\
-result : driver no appear in macos : system information app.\
+issue is that these boards are chinese knockoffs.\
+come with different serial-to-usb IC on hardware.\
+installing driver for this IC mostly fixes the issue.\
 \
+note: install will require restart.\
+\
+result : port  no appears in macos : system information app: usb. \
+result : port     appears in matlab: hardware support package for arduino:\
+         >> arduinosetup\
+result : port     appears in matlab: arduino() command \'97\
+         BUT ONLY for the ch340 driver port which appears in ">> arduinosetup" :\
+         >> a = arduino() % <-- run once after startup (:j)\
+         >> a = arduino('/dev/cu.wchusbserial1420','mega2560');\
+\
+         note: if the hardware is not included in the command, it fails.\
 .\
 \
 \
