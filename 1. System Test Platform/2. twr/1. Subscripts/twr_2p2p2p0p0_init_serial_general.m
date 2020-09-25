@@ -9,8 +9,10 @@ switch ui.srl.x.bluetooth
   
 case 0 % usb 
   switch srl.mode.address.usb
-  case 0; srl.address = '/dev/tty.usbmodem1411'; % left      usb port (2015 PC)
-  case 1; srl.address = '/dev/tty.usbmodem621';  % left-rear usb port (2008 PC)
+  case 0; srl.address = '/dev/tty.usbserial-1410'; % left      usb port (2015 macbook pro)
+  case 1; srl.address = '/dev/tty.usbmodem1411'  ; % left      usb port (2015 macbook pro) [legacy]
+  case 2; srl.address = '/dev/tty.usbmodem621'   ; % left-rear usb port (2008 macbook    )
+      
   end
 
   % note: Address needs to be changed manually for external mode:

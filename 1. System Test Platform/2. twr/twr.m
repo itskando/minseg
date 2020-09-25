@@ -1,5 +1,5 @@
 %% [Global ]                                                               
-minseg_0p0p0p0p0_global
+twr_0p0p0p0p0_global
 
 %% [Input  ]: Script: Commands                                             
 
@@ -56,7 +56,7 @@ switch 1  % serial duration
 end
 
 %% [Init   ]: initProcessOutputCleanup                                     
-minseg_1p0p0p0p0_initProcessOutputCleanup
+twr_1p0p0p0p0_initProcessOutputCleanup
 
 %% End
 

@@ -49,10 +49,10 @@ end
 
 %% [Init   ]: Plant: General                                               
 
-minseg_2p1p1p1p1_init_model_plant_general_wheelBody
-minseg_2p1p1p1p2_init_model_plant_general_motorDriver
-minseg_2p1p1p1p3_init_model_plant_general_motor
-minseg_2p1p1p1p4_init_model_plant_general_motorGearboxEncoder
+twr_2p1p1p1p1_init_model_plant_general_wheelBody
+twr_2p1p1p1p2_init_model_plant_general_motorDriver
+twr_2p1p1p1p3_init_model_plant_general_motor
+twr_2p1p1p1p4_init_model_plant_general_motorGearboxEncoder
 
 %% [Init   ]: Plant: Initial Condition                                     
 
@@ -72,9 +72,9 @@ end
 
 %% [Init   ]: Plant: Mode-specific                                         
 
-minseg_2p1p1p2p0_init_model_plant_hardware
-minseg_2p1p1p3p0_init_model_plant_nonlinearDynamics
-minseg_2p1p1p4p0_init_model_plant_linearDynamics
+twr_2p1p1p2p0_init_model_plant_hardware
+twr_2p1p1p3p0_init_model_plant_nonlinearDynamics
+twr_2p1p1p4p0_init_model_plant_linearDynamics
 
 %% End
 

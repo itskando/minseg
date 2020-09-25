@@ -22,10 +22,10 @@ ctrl.motorDriver_v.T.cmd  = 010; % [s]
 %% [Init   ]: Controller: Mode-specific                                    
 switch ctrl.motorDriver_v.mode
 
-case 0; minseg_2p1p2p1p0_init_model_controller_ff
-case 1; minseg_2p1p2p2p0_init_model_controller_pid
-case 2; minseg_2p1p2p3p0_init_model_controller_sfr % sfr
-case 3; minseg_2p1p2p3p0_init_model_controller_sfr % sfr with rts
+case 0; twr_2p1p2p1p0_init_model_controller_ff
+case 1; twr_2p1p2p2p0_init_model_controller_pid
+case 2; twr_2p1p2p3p0_init_model_controller_sfr % sfr
+case 3; twr_2p1p2p3p0_init_model_controller_sfr % sfr with rts
 
 end
 

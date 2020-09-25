@@ -8,7 +8,7 @@ mdl.motorCharacterization.var = Simulink.Variant( 'mdl_case == 1' );
 mdl.sensorCalibration.    var = Simulink.Variant( 'mdl_case == 2' );
 
 %% [Init   ]: General: Load model, if not already loaded                   
-mdl.label = 'minseg_M2V3_2017a';
+mdl.label = 'twr_M2V3_2017a';
 
 if ~bdIsLoaded( mdl.label )
 load_system(    mdl.label );

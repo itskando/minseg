@@ -16,10 +16,10 @@ plant.hardware.calculation.phi.z.gyroAndAccel. var = Simulink.Variant( 'plant_ha
 
 %% [Init   ]: Plant: Hardware: Components                                  
 
-minseg_2p1p1p2p1_init_model_plant_hardware_motorDriver
-minseg_2p1p1p2p2_init_model_plant_hardware_motorEncoder
-minseg_2p1p1p2p3_init_model_plant_hardware_gyroscope
-minseg_2p1p1p2p4_init_model_plant_hardware_accelerometer
+twr_2p1p1p2p1_init_model_plant_hardware_motorDriver
+twr_2p1p1p2p2_init_model_plant_hardware_motorEncoder
+twr_2p1p1p2p3_init_model_plant_hardware_gyroscope
+twr_2p1p1p2p4_init_model_plant_hardware_accelerometer
 
 %% End
 
